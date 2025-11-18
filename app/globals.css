@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 60 14% 21%;
+    --card: 0 0% 100%;
+    --card-foreground: 60 14% 21%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 60 14% 21%;
+    --primary: 60 16% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 60 12% 47%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 60 8% 95%;
+    --muted-foreground: 60 10% 32%;
+    --accent: 30 20% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 60 8% 88%;
+    --input: 60 8% 88%;
+    --ring: 60 16% 36%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved focus states for accessibility */
+@layer base {
+  * {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2;
+  }
+}
+
+/* Smooth transitions for interactive elements */
+@layer components {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}

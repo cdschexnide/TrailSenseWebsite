@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/home/Documents/TrailSense/**)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "mcp__puppeteer__puppeteer_navigate"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
