@@ -642,7 +642,7 @@ export default function ProductPage() {
           <p className="mx-auto mt-6 max-w-xl text-lg text-primary-100">
             Get a custom quote based on your property size and monitoring needs.
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-x-6">
             <Button asChild size="xl" variant="secondary">
               <Link href="/contact">Request a Quote</Link>
             </Button>

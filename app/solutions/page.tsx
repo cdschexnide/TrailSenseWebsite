@@ -242,7 +242,7 @@ export default function SolutionsPage() {
           <p className="mx-auto mt-6 max-w-xl text-lg text-primary-100">
             Tell us about your property and we'll create a custom deployment plan with pricing.
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-x-6">
             <Button asChild size="xl" variant="secondary">
               <Link href="/contact">
                 Request Custom Quote <ArrowRight className="ml-2 h-5 w-5" />

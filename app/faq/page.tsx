@@ -199,7 +199,7 @@ export default function FAQPage() {
             Our team is here to help. Contact us with any questions about
             TrailSense technology, deployment planning, or custom requirements.
           </p>
-          <div className="flex items-center justify-center gap-x-6">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-x-6">
             <Button asChild size="lg">
               <Link href="/contact">Contact Us</Link>
             </Button>
