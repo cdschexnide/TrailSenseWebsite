@@ -15,7 +15,7 @@ export function CTA() {
             Our team will help design the optimal deployment strategy for
             maximum coverage.
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-x-6">
             <Button asChild size="xl" variant="secondary">
               <Link href="/contact">
                 Request a Quote <ArrowRight className="ml-2 h-5 w-5" />

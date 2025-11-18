@@ -26,7 +26,7 @@ export function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className="mt-10 flex items-center gap-x-6">
+          <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-x-6">
             <Button asChild size="xl">
               <Link href="/contact">
                 Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
@@ -41,20 +41,18 @@ export function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="mt-10 flex items-center gap-x-6 border-t border-earth-200 pt-10">
-            <div>
-              <p className="text-3xl font-bold text-primary-600">800+ ft</p>
-              <p className="text-sm text-earth-600">Detection Range</p>
+          <div className="mt-10 grid grid-cols-3 gap-4 border-t border-earth-200 pt-10">
+            <div className="text-center sm:text-left">
+              <p className="text-2xl sm:text-3xl font-bold text-primary-600">800+ ft</p>
+              <p className="text-xs sm:text-sm text-earth-600">Detection Range</p>
             </div>
-            <div className="h-12 w-px bg-earth-300" />
-            <div className="text-center">
-              <p className="text-3xl font-bold text-primary-600">24/7</p>
-              <p className="text-sm text-earth-600">Autonomous Operation</p>
+            <div className="text-center border-x border-earth-300 px-2">
+              <p className="text-2xl sm:text-3xl font-bold text-primary-600">24/7</p>
+              <p className="text-xs sm:text-sm text-earth-600">Autonomous Operation</p>
             </div>
-            <div className="h-12 w-px bg-earth-300" />
-            <div>
-              <p className="text-3xl font-bold text-primary-600">3-Band</p>
-              <p className="text-sm text-earth-600">Detection System</p>
+            <div className="text-center sm:text-left">
+              <p className="text-2xl sm:text-3xl font-bold text-primary-600">3-Band</p>
+              <p className="text-xs sm:text-sm text-earth-600">Detection System</p>
             </div>
           </div>
         </div>
