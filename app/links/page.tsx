@@ -35,7 +35,7 @@ const links: LinkItem[] = [
   {
     title: 'Pitch Deck',
     description: 'View our company presentation',
-    href: '#', // TODO: Add pitch deck link
+    href: '/pitch-deck',
     icon: FileText,
     gradient: 'from-clay-500 to-clay-600',
     enabled: true,
@@ -89,14 +89,15 @@ const logoVariants = {
 // Link Card Component
 function LinkCard({ link }: { link: LinkItem }) {
   const Icon = link.icon
+  const isExternal = link.href.startsWith('http')
 
   if (!link.enabled) return null
 
   return (
     <motion.a
       href={link.href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       variants={itemVariants}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
@@ -122,8 +123,10 @@ function LinkCard({ link }: { link: LinkItem }) {
             </p>
           </div>
 
-          {/* External link icon */}
-          <ExternalLink className="flex-shrink-0 w-5 h-5 text-earth-400 group-hover:text-primary-600 transition-colors duration-300" />
+          {/* External link icon - only show for external links */}
+          {isExternal && (
+            <ExternalLink className="flex-shrink-0 w-5 h-5 text-earth-400 group-hover:text-primary-600 transition-colors duration-300" />
+          )}
         </div>
       </div>
     </motion.a>
