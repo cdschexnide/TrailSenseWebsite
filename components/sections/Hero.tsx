@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -61,21 +62,14 @@ export function Hero() {
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex lg:items-center">
           <div className="w-full">
             <div className="rounded-2xl bg-earth-900/5 p-2 ring-1 ring-inset ring-earth-900/10 lg:rounded-2xl lg:p-4">
-              {/* Placeholder for device image */}
-              <div className="aspect-[16/10] w-full rounded-md bg-gradient-to-br from-primary-600 to-sage-700 shadow-2xl ring-1 ring-earth-900/10 flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <p className="text-2xl font-bold mb-2">
-                    TrailSense Detection Unit
-                  </p>
-                  <p className="text-sm opacity-80">
-                    Product image placeholder
-                  </p>
-                  <p className="text-xs opacity-60 mt-4 max-w-md">
-                    Replace this with high-quality product photography showing
-                    the device in an outdoor deployment scenario
-                  </p>
-                </div>
-              </div>
+              <Image
+                src="/assets/device.png"
+                alt="TrailSense Detection Unit"
+                width={800}
+                height={500}
+                className="w-full rounded-md shadow-2xl ring-1 ring-earth-900/10"
+                priority
+              />
             </div>
           </div>
         </div>

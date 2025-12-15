@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Radio,
   Wifi,
@@ -48,19 +49,17 @@ export default function ProductPage() {
             </p>
           </div>
 
-          {/* Product image placeholder */}
+          {/* Product image */}
           <div className="mt-12 flex justify-center">
             <div className="relative rounded-2xl bg-earth-900/5 p-8 ring-1 ring-inset ring-earth-900/10">
-              <div className="aspect-[16/9] w-full max-w-4xl rounded-lg bg-gradient-to-br from-primary-600 to-sage-700 shadow-2xl flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <p className="text-3xl font-bold mb-2">
-                    TrailSense Detection Unit
-                  </p>
-                  <p className="text-sm opacity-80">
-                    Add multiple angles of product photography
-                  </p>
-                </div>
-              </div>
+              <Image
+                src="/assets/device.png"
+                alt="TrailSense Detection Unit"
+                width={896}
+                height={504}
+                className="w-full max-w-4xl rounded-lg shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>
