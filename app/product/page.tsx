@@ -53,7 +53,7 @@ export default function ProductPage() {
           <div className="mt-12 flex justify-center">
             <div className="relative rounded-2xl bg-earth-900/5 p-8 ring-1 ring-inset ring-earth-900/10">
               <Image
-                src="/assets/device.png"
+                src="/images/device.png"
                 alt="TrailSense Detection Unit"
                 width={896}
                 height={504}

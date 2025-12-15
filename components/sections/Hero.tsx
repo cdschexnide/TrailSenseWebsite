@@ -63,7 +63,7 @@ export function Hero() {
           <div className="w-full">
             <div className="rounded-2xl bg-earth-900/5 p-2 ring-1 ring-inset ring-earth-900/10 lg:rounded-2xl lg:p-4">
               <Image
-                src="/assets/device.png"
+                src="/images/device.png"
                 alt="TrailSense Detection Unit"
                 width={800}
                 height={500}
