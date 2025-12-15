@@ -65,9 +65,9 @@ export function Hero() {
               <Image
                 src="/images/device.png"
                 alt="TrailSense Detection Unit"
-                width={800}
-                height={500}
-                className="w-full rounded-md shadow-2xl ring-1 ring-earth-900/10"
+                width={400}
+                height={250}
+                className="w-auto max-w-md rounded-md shadow-2xl ring-1 ring-earth-900/10 mx-auto"
                 priority
               />
             </div>
