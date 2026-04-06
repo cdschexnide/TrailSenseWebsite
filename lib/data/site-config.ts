@@ -55,6 +55,6 @@ export const company = {
   name: 'TrailSense',
   legalName: 'TrailSense, Inc.',
   founded: '2024',
-  type: 'S Corporation',
+  type: 'C Corporation',
   tagline: 'Professional-grade security for remote properties',
 }
