@@ -49,7 +49,7 @@ const categories = [
       },
       {
         q: 'Does the LNA help on every band?',
-        a: 'The Nooelec LANA covers 20-4000 MHz with about 25 dB gain. Most cellular bands and the 2.4 GHz ISM band fall inside that pass-band. Frequencies above 4 GHz - 5 GHz WiFi, 6 GHz UNII, mmWave 5G - sit outside the LNA pass-band, so you get reduced sensitivity there. The AD8317 itself can still see them at lower amplitude.',
+        a: 'The Nooelec LANA covers 20-4000 MHz with about 20 dB gain. Most cellular bands and the 2.4 GHz ISM band fall inside that pass-band. Frequencies above 4 GHz - 5 GHz WiFi, 6 GHz UNII, mmWave 5G - sit outside the LNA pass-band, so you get reduced sensitivity there. The AD8317 itself can still see them at lower amplitude.',
       },
       {
         q: 'How many units do I need for my property?',

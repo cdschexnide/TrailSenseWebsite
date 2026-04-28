@@ -129,7 +129,7 @@ All values pulled from the company logo (olive military bg + dark badge + khaki 
 
 ## Marketing Claim Discipline
 
-Every spec claim on this site must be defensible against the firmware at `/Users/codyschexnider/Documents/Project/TrailSenseDevice`. The hardware is an AD8317 logarithmic RF power detector + Nooelec LANA LNA (20–4000 MHz, ~25 dB gain) + an ESP32-S3 running the in-house detection engine.
+Every spec claim on this site must be defensible against the firmware at `/Users/codyschexnider/Documents/Project/TrailSenseDevice`. The hardware is a logarithmic RF power detector + Nooelec LANA LNA (20–4000 MHz, ~20 dB gain) + an ESP32-S3 running the in-house detection engine.
 
 **What is true:**
 - Three concurrent sensing channels: wideband analog RF (20–4000 MHz via AD8317 + LNA), 802.11 WiFi 2.4 GHz promiscuous-mode capture, BLE GAP passive scan.
@@ -152,7 +152,7 @@ When writing or editing copy, audit against this list. When in doubt, ask whethe
 
 ## Page Inventory
 1. **Home (`/`)** - telemetry strip → header → hero → capabilities → mobile app → olive panel → specifications → use cases → get started (demo + waitlist) → footer.
-2. **Product (`/product`)** - deep dive on TS-001 detection unit. Spec sheet, configurations, mounting options.
+2. **Product (`/product`)** - deep dive on the TrailSense Meerkat. Spec sheet, configurations, mounting options.
 3. **Technology (`/technology`)** - how passive multi-band detection works. Diagrams.
 4. **App (`/app`)** - mobile app feature tour. Compass, route, AI, alerts, dashboard, live radar.
 5. **Solutions (`/solutions`)** - sector deep-dives (ranch, conservation, industrial, tactical).

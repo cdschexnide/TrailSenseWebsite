@@ -24,7 +24,7 @@ const specs: Spec[] = [
   {
     key: 'LNA',
     desc: 'Wideband ultra-low-noise amplifier, bias-tee compatible.',
-    value: '~25 dB gain',
+    value: '~20 dB gain',
   },
   {
     key: 'WiFi / BLE sensitivity',
@@ -43,7 +43,7 @@ const specs: Spec[] = [
   },
   {
     key: 'Uplink',
-    desc: 'LTE PPP backhaul to Golioth via CoAP',
+    desc: 'LTE PPP backhaul to Golioth (CoAP)',
     value: 'LTE · COAP-DTLS',
   },
   {

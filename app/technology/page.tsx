@@ -5,7 +5,7 @@ import { ArrowRight, Radio, Wifi, Bluetooth } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Technology',
   description:
-    'How TrailSense actually works: AD8317 wideband RF detection, Nooelec LANA LNA, ESP32-S3 with proprietary detection engine. Three concurrent sensing channels fused with IE fingerprinting and cross-modal correlation.',
+    'How TrailSense actually works: wideband RF detection running a proprietary detection engine. Three concurrent sensing channels fused with IE fingerprinting and cross-modal correlation.',
 }
 
 export default function TechnologyPage() {
@@ -23,7 +23,7 @@ export default function TechnologyPage() {
               Three RF channels. <span className="text-gold">One fused picture.</span>
             </h1>
             <p className="max-w-[640px] text-lg leading-relaxed text-fg-secondary">
-              TrailSense is not magic. It is an AD8317 logarithmic RF power detector behind a Nooelec LANA wideband LNA, plus the ESP32-S3&apos;s native WiFi and BLE radios, all feeding our proprietary detection engine. This page explains, with no marketing fluff, exactly what each piece does and what it cannot do.
+              TrailSense is not magic. It is a logarithmic RF power detector feeding our proprietary detection engine. This page explains, with no marketing fluff, exactly what each piece does and what it cannot do.
             </p>
           </div>
         </div>
@@ -36,14 +36,14 @@ export default function TechnologyPage() {
         icon={Radio}
         title="Analog RF burst detection."
         body={[
-          "The AD8317 is a logarithmic power detector with a 60 dB dynamic range from -55 dBm to 0 dBm. We pair it with a Nooelec LANA LNA (~25 dB gain, 20-4000 MHz pass-band) so it can pick up faint transmissions from across a property.",
-          "Crucially, the AD8317 is not a tuner. It does not decode protocols, identify cellular bands, or distinguish LTE from 5G from a microwave oven. What it does is output a DC voltage proportional to total RF energy in its input bandwidth. The ESP32 samples that voltage at 1 kHz, tracks the noise floor, and flags a burst when energy crosses the noise floor by 10 dB or more for at least three consecutive samples.",
-          "What this gets you: the unit detects active RF transmissions in the 20-4000 MHz range - which covers most cellular uplink bands and the 2.4 GHz ISM band. What it does not get you: which carrier, which protocol, which device.",
+          "The AD8317 is a logarithmic RF power detector with a 60 dB dynamic range from -55 dBm to 0 dBm. We pair it with a Ultra Low-Noise Amplifier (~20 dB gain, 20-4000 MHz pass-band) so it can pick up faint transmissions from across a property.",
+          "It outputs a DC voltage proportional to total RF energy in its input bandwidth. It samples that voltage at 1 kHz, tracks the noise floor, and flags a burst when energy crosses the noise floor by 10 dB or more for at least three consecutive samples.",
+          "What this gets you: the unit detects active RF transmissions in the 20-4000 MHz range - which covers most cellular uplink bands and the 2.4 GHz ISM band. What it does not get you: which carrier, which protocol, which device, or any other identifying or personal information of the cell phone.",
         ]}
         specs={[
           { label: 'Pass-band', value: '20 - 4000 MHz' },
           { label: 'Detector input range', value: '-55 to 0 dBm' },
-          { label: 'LNA gain', value: '~25 dB' },
+          { label: 'LNA gain', value: '~20 dB' },
           { label: 'Sample rate', value: '1 kHz' },
           { label: 'Burst threshold', value: '+10 dB above noise floor' },
         ]}
@@ -56,9 +56,9 @@ export default function TechnologyPage() {
         icon={Wifi}
         title="802.11 management-frame capture."
         body={[
-          "The ESP32-S3&apos;s WiFi radio runs in promiscuous mode and captures probe requests and beacons broadcast by every WiFi-enabled device in range. Each frame yields a source MAC, an RSSI, and a set of 802.11 information elements (IEs) describing the device&apos;s hardware capabilities.",
+          "The WiFi radio runs in promiscuous mode and captures probe requests and beacons broadcast by every WiFi-enabled device in range. Each frame yields a source MAC, an RSSI, and a set of 802.11 information elements (IEs) describing the device&apos;s hardware capabilities.",
           "Modern phones randomize their MAC for privacy. Our detection engine works around this by hashing the IE fields - supported rates, HT/VHT/HE capabilities - which do not change when the MAC rotates. The fingerprint is the same; only the address has changed.",
-          "Note: this channel is 2.4 GHz only. The ESP32&apos;s WiFi radio does not channel-hop into the 5 GHz UNII band. If a device is 5 GHz only, we will not see it on this channel.",
+          "Note: this channel is 2.4 GHz only. The WiFi radio does not channel-hop into the 5 GHz UNII band. If a device is 5 GHz only, we will not see it on this channel.",
         ]}
         specs={[
           { label: 'Mode', value: 'Promiscuous' },
@@ -76,7 +76,7 @@ export default function TechnologyPage() {
         icon={Bluetooth}
         title="Passive advertisement scanning."
         body={[
-          "The ESP32&apos;s BLE GAP scanner reads advertisements from every BLE device in range. Each advertisement yields the advertiser address, address type, RSSI, manufacturer data, device name, and timing.",
+          "The BLE GAP scanner reads advertisements from every BLE device in range. Each advertisement yields the advertiser address, address type, RSSI, manufacturer data, device name, and timing.",
           "We classify each detection by phone-likeness. Apple- and Google-style manufacturer data, RPA/NRPA address types, and 100-1500 ms advertising intervals are strong phone signals. Beacons, fitness trackers, and IoT noise are downweighted.",
           "BLE is short-range by physics, so this channel mostly catches devices that come close to a unit - someone walking past, an AirTag in a vehicle, a phone in a pocket. The signal strength is what powers our cross-modal correlation: when a BLE detection and a WiFi detection track each other in time and RSSI, the engine merges them into a single device.",
         ]}
@@ -99,7 +99,7 @@ export default function TechnologyPage() {
             </div>
             <h2 className="section-h2">From three streams to one device count.</h2>
             <p className="section-dek">
-              Three radios produce three independent streams of noisy evidence. Our detection engine resolves that evidence into a single, conservative count of unique devices on the property. It runs on the ESP32-S3 in fixed-point math - no GPU, no cloud, no floats.
+              Three radios produce three independent streams of noisy evidence. Our detection engine resolves that evidence into a single, conservative count of unique devices on the property. It runs on the Meerkat in fixed-point math - no GPU, no cloud, no floats.
             </p>
           </div>
 
@@ -150,7 +150,7 @@ export default function TechnologyPage() {
                 Passive only. No content. No identity.
               </h2>
               <p className="max-w-[640px] text-fg-secondary">
-                The detection unit never transmits a probe of its own. It cannot intercept calls, messages, or data; the AD8317 has no demodulator and the WiFi/BLE radios run in passive mode. We log fingerprints and signal strengths, not identities. Monitoring publicly broadcast RF on your own property is legal in the U.S., but specific use cases - especially commercial or government - should be reviewed against local statute. We are not your lawyer.
+                The detection unit never transmits a probe of its own. It cannot intercept calls, messages, or data; the Meerkat has no demodulator and the WiFi/BLE radios run in passive mode. We log fingerprints and signal strengths, not identities. Monitoring publicly broadcast RF on your own property is legal in the U.S., but specific use cases - especially commercial or government - should be reviewed against local statute. We are not your lawyer.
               </p>
             </div>
             <Link

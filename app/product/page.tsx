@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Product',
   description:
-    'TrailSense TS-001 detection unit: AD8317 logarithmic RF detector + Nooelec LANA LNA + ESP32-S3, weatherproof outdoor housing, solar power, LTE PPP backhaul to Golioth.',
+    'TrailSense Meerkat: a logarithmic RF detector + Ultra Low-Noise Amplifier + proprietary detection engine, weatherproof outdoor housing, solar power, LTE PPP backhaul to Golioth.',
 }
 
 const specs = [
@@ -23,11 +23,11 @@ const specs = [
   {
     key: 'LNA',
     desc: 'Wideband ultra-low-noise amplifier, bias-tee compatible.',
-    value: '~25 dB gain',
+    value: '~20 dB gain',
   },
   {
     key: 'WiFi / BLE radio',
-    desc: 'Native ESP32-S3 radios. WiFi 2.4 GHz promiscuous-mode capture, BLE GAP passive scan.',
+    desc: 'WiFi 2.4 GHz promiscuous-mode capture, BLE GAP passive scan.',
     value: '2.4 GHz',
   },
   {
@@ -46,29 +46,19 @@ const specs = [
     value: 'TRIANGULATION',
   },
   {
-    key: 'Compute',
-    desc: 'ESP32-S3 dual-core, 16 MB flash. Fixed-point math throughout the detection pipeline; no floats.',
-    value: 'ESP32-S3',
-  },
-  {
     key: 'Uplink',
     desc: 'LTE PPP backhaul to Golioth (CoAP / DTLS) or Nightingale Analytics. Pre-activated SIM included.',
     value: 'LTE-M / NB-IoT',
   },
   {
     key: 'Power',
-    desc: 'Solar panel + 18650 lithium-ion. Low-power sleep modes between scan cycles. Multi-month autonomy in low sun.',
-    value: '12V DC / SOLAR',
+    desc: 'Solar panel + lithium-ion. Low-power sleep modes between scan cycles. Multi-month autonomy in low sun.',
+    value: '5V DC / SOLAR',
   },
   {
     key: 'Enclosure',
     desc: 'Outdoor-rated housing, UV-stabilized polycarbonate, tool-free mount on fence, post, or tree.',
     value: 'IP67-CLASS',
-  },
-  {
-    key: 'Operating temperature',
-    desc: 'Field-tested across the seasonal envelope.',
-    value: '-20°C / +60°C',
   },
 ]
 
@@ -88,7 +78,7 @@ export default function ProductPage() {
                 The detection unit, <span className="text-gold">end to end.</span>
               </h1>
               <p className="mb-10 max-w-[560px] text-lg leading-relaxed text-fg-secondary">
-                The TrailSense Meerkat is a passive RF perimeter sensor: an AD8317 logarithmic RF detector behind a Nooelec LANA LNA, plus the ESP32-S3&apos;s WiFi and BLE radios, all running proprietary detection engine. Solar power, LTE backhaul, weatherproof housing, mounts in 90 seconds.
+                The TrailSense Meerkat is a passive RF perimeter sensor: a logarithmic RF detector running a proprietary detection engine. Solar power, LTE backhaul, weatherproof housing, mounts in 90 seconds.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -122,7 +112,7 @@ export default function ProductPage() {
                 />
                 <Image
                   src="/images/device.png"
-                  alt="TrailSense TS-001 detection unit"
+                  alt="TrailSense Meerkat"
                   width={420}
                   height={420}
                   priority
@@ -145,7 +135,7 @@ export default function ProductPage() {
             </div>
             <h2 className="section-h2">Built for the field.</h2>
             <p className="section-dek">
-              Detection range varies with source transmit power, antenna, terrain, and band. We do not print a single number; we map your actual property on the demo call.
+              Detection range varies with source transmit power, antenna, terrain, and band. 
             </p>
           </div>
           <div className="overflow-hidden rounded border border-hairline bg-bg-surface">
@@ -179,29 +169,25 @@ export default function ProductPage() {
           </div>
           <div className="grid gap-1 overflow-hidden rounded border border-hairline bg-hairline md:grid-cols-2 lg:grid-cols-3">
             <BoxItem
-              title="TS-001 detection unit"
+              title="TrailSense Meerkat"
               body="Fully assembled in IP67-class enclosure with antennas integrated. Pre-flashed firmware with the latest detection engine."
             />
             <BoxItem
               title="Solar panel + battery"
-              body="12V solar panel and 18650 lithium-ion battery pack, sized for off-grid operation through low-sun seasons."
+              body="12V solar panel and lithium-ion battery pack, sized for off-grid operation through low-sun seasons."
             />
             <BoxItem
               title="LTE SIM card"
-              body="Pre-activated cellular data SIM with three months of LTE-M / NB-IoT service included; bring your own carrier after."
+              body="Pre-activated cellular data SIM with LTE service."
             />
-            <BoxItem
+            {/* <BoxItem
               title="Mount kit"
               body="Tool-free post / tree / pole mount, plus weatherproof connectors and tamper-resistant fasteners."
-            />
-            <BoxItem
-              title="Quick-start card"
-              body="Single page. Mount, power on, scan QR with the app, you&apos;re online. Full docs at trailsense.com/docs."
-            />
-            <BoxItem
+            /> */}
+            {/* <BoxItem
               title="Software updates"
               body="OTA firmware updates over LTE for the life of the unit. New detection engine releases auto-deploy."
-            />
+            /> */}
           </div>
         </div>
       </section>
