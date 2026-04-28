@@ -8,38 +8,53 @@ type Spec = {
 
 const specs: Spec[] = [
   {
-    key: 'Detection range',
-    desc: 'Effective passive scan radius across all three RF bands.',
+    key: 'RF coverage',
+    desc: 'LNA pass-band on the analog channel. AD8317 detector itself extends to 10 GHz at reduced gain.',
     value: (
       <>
-        500 – <span className="text-gold">800FT</span>
+        20 – <span className="text-gold">4000 MHz</span>
       </>
     ),
   },
   {
-    key: 'Power',
-    desc: 'Solar panel + lithium-ion. 30+ days off-grid in low sun.',
-    value: '12V · 20W',
+    key: 'Detector',
+    desc: 'AD8317 logarithmic RF power detector, 60 dB dynamic range.',
+    value: '−55 → 0 dBm',
   },
   {
-    key: 'Enclosure',
-    desc: 'Polycarbonate housing, UV-stabilized, IP67 rated.',
-    value: 'IP67 · -40°F → 158°F',
+    key: 'LNA',
+    desc: 'Nooelec LANA wideband ultra-low-noise amplifier, bias-tee compatible.',
+    value: '~25 dB gain',
+  },
+  {
+    key: 'WiFi / BLE sensitivity',
+    desc: 'RSSI threshold below which a frame is ignored. Tunable at runtime.',
+    value: '−85 dBm',
+  },
+  {
+    key: 'Detection engine',
+    desc: 'Kalman-filtered RSSI fusion, IE fingerprinting, phantom-MAC suppression, cross-modal association.',
+    value: 'V2 FUSION',
+  },
+  {
+    key: 'Localization',
+    desc: 'Multi-position multilateration. Resolves device location while the platform moves.',
+    value: 'TRIANGULATION',
   },
   {
     key: 'Uplink',
-    desc: 'LTE-M / NB-IoT cellular. Falls back to satellite mesh if configured.',
-    value: 'LTE-M · NB-IoT',
+    desc: 'LTE PPP backhaul to Golioth (CoAP / DTLS) or Nightingale Analytics API.',
+    value: 'LTE · COAP-DTLS',
   },
   {
-    key: 'Dimensions',
-    desc: 'Compact mounting form, deployable on fence, post, or tree.',
-    value: '8.5 × 5.0 × 2.2 IN',
+    key: 'Power',
+    desc: 'Solar panel + lithium-ion. Runs continuously while powered.',
+    value: '12V DC',
   },
   {
-    key: 'Weight',
-    desc: 'Tool-free mount included. Mounts in under 90 seconds.',
-    value: '2.4 LB',
+    key: 'Enclosure',
+    desc: 'Outdoor-rated housing for fence, post, or tree mount.',
+    value: 'IP67-class',
   },
 ]
 
@@ -56,7 +71,7 @@ export function Specifications() {
             </div>
             <h2 className="section-h2">Built for the field.</h2>
             <p className="section-dek">
-              Hardened for remote deployment. Solar-rated power, weatherproof enclosure, configurable from 100 yards out via the TrailSense mobile app.
+              Hardware: an AD8317 logarithmic RF detector behind a Nooelec LANA LNA, an ESP32-S3 running the V2 detection engine, an LTE PPP modem for backhaul. Effective range varies with source transmit power, antenna, terrain, and band — full performance characterization on request.
             </p>
           </div>
           <Link

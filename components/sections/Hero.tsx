@@ -10,16 +10,16 @@ export function Hero() {
         <div>
           <div className="mb-6 flex items-center gap-3 font-mono text-[11px] uppercase tracking-spaced text-gold">
             <span className="block h-px w-8 bg-gold" />
-            PASSIVE PERIMETER DETECTION · TS-001
+            PASSIVE PERIMETER SENSING · TS-001
           </div>
 
           <h1 className="mb-7 font-display text-4xl font-extrabold leading-[0.96] tracking-display-tight text-fg-primary text-balance sm:text-6xl lg:text-7xl">
             Property security through{' '}
-            <span className="text-gold">passive device</span> detection.
+            <span className="text-gold">passive RF</span> sensing.
           </h1>
 
           <p className="mb-10 max-w-[540px] text-lg leading-relaxed text-fg-secondary">
-            TrailSense detection units passively scan for cellular, WiFi, and Bluetooth signals across 500 to 800+ feet, alerting you to unauthorized presence in real time. No active transmission, no cameras, no monthly fees.
+            TrailSense monitors three RF channels in parallel: wideband RF power across 20 MHz to 4 GHz via an AD8317 logarithmic detector, plus 802.11 WiFi 2.4 GHz and Bluetooth Low Energy. A V2 fusion engine correlates the evidence and tracks devices across MAC rotation. No cameras. No active transmission. No recurring fees.
           </p>
 
           <div className="mb-14 flex flex-wrap gap-3">
@@ -40,9 +40,9 @@ export function Hero() {
           </div>
 
           <div className="grid max-w-[540px] grid-cols-3 gap-8 border-t border-hairline pt-8">
-            <Stat label="Detection range" value="800" unit="FT" />
+            <Stat label="RF coverage" value="20–4000" unit="MHz" />
             <Stat label="Autonomous" value="24/7" />
-            <Stat label="Detection bands" value="3" unit="×RF" />
+            <Stat label="Sensing channels" value="3" unit="× RF" />
           </div>
         </div>
 
@@ -53,7 +53,6 @@ export function Hero() {
             <span className="text-fg-disabled">FIG. 01</span>
           </div>
           <div className="relative grid h-full place-items-center overflow-hidden rounded-sm bg-gradient-to-b from-bg-elevated to-bg-surface">
-            {/* grid overlay */}
             <div
               className="pointer-events-none absolute inset-0 opacity-25"
               style={{
@@ -62,7 +61,6 @@ export function Hero() {
                 backgroundSize: '32px 32px',
               }}
             />
-            {/* crosshair corners */}
             <Crosshair className="left-3 top-3" />
             <Crosshair className="right-3 top-3" flipX />
             <Crosshair className="bottom-3 left-3" flipY />
@@ -77,7 +75,7 @@ export function Hero() {
             />
           </div>
           <div className="mt-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-spaced text-fg-muted">
-            <span>RF · CELL · WIFI · BT</span>
+            <span>RF · WIFI · BLE</span>
             <span className="inline-flex items-center gap-2 text-status-active">
               <span className="pulse-dot" />
               SCANNING

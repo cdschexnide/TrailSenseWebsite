@@ -8,23 +8,23 @@ export function TelemetryStrip() {
         </span>
         <span className="text-fg-disabled">/</span>
         <span className="flex items-center gap-1.5">
-          <span className="text-fg-disabled">RF</span>
-          <span className="text-fg-secondary">2.4GHz · 5.8GHz · LTE</span>
+          <span className="text-fg-disabled">BAND</span>
+          <span className="text-fg-secondary">20–4000 MHz</span>
         </span>
         <span className="text-fg-disabled">/</span>
         <span className="flex items-center gap-1.5">
-          <span className="text-fg-disabled">RANGE</span>
-          <span className="text-fg-secondary">800FT</span>
+          <span className="text-fg-disabled">ENGINE</span>
+          <span className="text-fg-secondary">V2 FUSION</span>
         </span>
         <span className="text-fg-disabled">/</span>
         <span className="flex items-center gap-1.5">
-          <span className="text-fg-disabled">UNITS DEPLOYED</span>
-          <span className="text-fg-secondary tabular">2,418</span>
+          <span className="text-fg-disabled">WIFI</span>
+          <span className="text-fg-secondary">2.4 GHz</span>
         </span>
         <span className="text-fg-disabled">/</span>
         <span className="flex items-center gap-1.5">
-          <span className="text-fg-disabled">UPTIME</span>
-          <span className="text-fg-secondary tabular">99.97%</span>
+          <span className="text-fg-disabled">BLE</span>
+          <span className="text-fg-secondary">PASSIVE</span>
         </span>
       </div>
     </div>

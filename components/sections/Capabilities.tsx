@@ -9,35 +9,35 @@ type Capability = {
 const capabilities: Capability[] = [
   {
     num: '01',
-    band: 'CELLULAR',
-    title: 'LTE / 5G band detection',
-    body: 'Detect any active cellular device within range, including dormant phones broadcasting handshake signals to nearby towers.',
+    band: 'WIDEBAND RF',
+    title: 'Analog RF burst detection.',
+    body: 'An AD8317 logarithmic power detector paired with a Nooelec LANA LNA passively monitors RF energy from 20 MHz to 4 GHz. When a transmission breaks the noise floor, the firmware logs a burst. No protocol decoding, no active emission.',
     specs: [
-      { label: 'Bands', value: 'B2 / B4 / B12 / N71' },
-      { label: 'Range', value: '600–800FT' },
-      { label: 'Latency', value: '< 2.0S' },
+      { label: 'Coverage', value: '20 – 4000 MHz' },
+      { label: 'Detector', value: 'AD8317 LOG' },
+      { label: 'LNA gain', value: '~25 dB' },
     ],
   },
   {
     num: '02',
-    band: 'WIFI',
-    title: '2.4 + 5 GHz monitoring',
-    body: 'Captures probe requests and association attempts from any WiFi device, including iPhones in standby and IoT trackers.',
+    band: 'WIFI 2.4 GHZ',
+    title: '802.11 management-frame capture.',
+    body: 'Promiscuous-mode capture of probe requests and beacons. 802.11 information-element fingerprinting tracks devices across MAC randomization, so a single phone reads as one device, not twelve.',
     specs: [
-      { label: 'Freq', value: '2.4GHz · 5.8GHz' },
-      { label: 'Range', value: '500–700FT' },
-      { label: 'MAC randomization', value: 'DEFEATED' },
+      { label: 'Mode', value: 'PROMISCUOUS' },
+      { label: 'Frames', value: 'PROBE / BEACON' },
+      { label: 'MAC rotation', value: 'IE-FINGERPRINTED' },
     ],
   },
   {
     num: '03',
-    band: 'BLUETOOTH',
-    title: 'BLE + classic detection',
-    body: 'Picks up phones, AirTags, tile trackers, smart watches, and any other BLE-broadcasting device on a property.',
+    band: 'BLUETOOTH BLE',
+    title: 'Passive advertisement scanning.',
+    body: 'A BLE GAP scanner reads advertiser address, manufacturer ID, and device name from every BLE broadcast in range. A phone-likeness heuristic separates handsets from generic IoT trackers.',
     specs: [
-      { label: 'Protocol', value: 'BLE · BR/EDR' },
-      { label: 'Range', value: '300–500FT' },
-      { label: 'UUID filter', value: 'YES' },
+      { label: 'Mode', value: 'PASSIVE SCAN' },
+      { label: 'Stack', value: 'BLE GAP' },
+      { label: 'Classifier', value: 'PHONE-LIKENESS' },
     ],
   },
 ]
@@ -49,15 +49,14 @@ export function Capabilities() {
         <div className="label-row">CAPABILITIES · 01</div>
         <div className="mb-16 max-w-[720px]">
           <div className="coords">
-            <span className="khaki">34.0522°N</span>
-            <span className="khaki">118.2437°W</span>
-            <span className="num">{'// PT-A'}</span>
+            <span className="khaki">SENSING CHANNELS</span>
+            <span className="num">{'// 03'}</span>
           </div>
           <h2 className="section-h2">
-            Three detection bands. One field-tested unit.
+            Three RF channels. One fused picture.
           </h2>
           <p className="section-dek">
-            Each TrailSense unit fuses cellular, WiFi, and Bluetooth detection into a single passive device. No active transmission, no cellular service required, no recurring fees.
+            Each TrailSense unit runs three concurrent sensing channels — a wideband analog RF detector, an 802.11 WiFi sniffer, and a passive BLE scanner. A V2 detection engine fuses the evidence and resolves the same device seen across multiple channels into one detection.
           </p>
         </div>
 

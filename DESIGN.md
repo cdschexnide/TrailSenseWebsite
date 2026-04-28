@@ -127,6 +127,29 @@ All values pulled from the company logo (olive military bg + dark badge + khaki 
 - **Numbers and specifics:** "500–800ft", "30+ days off-grid", "2,418 units deployed." Never "industry-leading" or "best-in-class."
 - **No corporate fillers:** no "leverage," "delve," "robust," "comprehensive," "nuanced," "underscore," "showcase," "fundamental," "pivotal."
 
+## Marketing Claim Discipline
+
+Every spec claim on this site must be defensible against the firmware at `/Users/codyschexnider/Documents/Project/TrailSenseDevice`. The hardware is an AD8317 logarithmic RF power detector + Nooelec LANA LNA (20–4000 MHz, ~25 dB gain) + an ESP32-S3 running the V2 detection engine.
+
+**What is true:**
+- Three concurrent sensing channels: wideband analog RF (20–4000 MHz via AD8317 + LNA), 802.11 WiFi 2.4 GHz promiscuous-mode capture, BLE GAP passive scan.
+- 802.11 IE fingerprinting tracks devices across MAC randomization (one phone reads as one device).
+- BLE phone-likeness heuristic separates handsets from generic IoT trackers.
+- Wideband RF burst detection: noise-floor tracking + ≥10 dB threshold over 3 consecutive samples.
+- V2 detection engine: Kalman-filtered RSSI fusion, phantom-MAC suppression, cross-modal WiFi↔BLE association.
+- Multi-position multilateration ("triangulation") while platform moves.
+- LTE PPP backhaul to Golioth (CoAP/DTLS) or Nightingale Analytics.
+
+**What is NOT true (do not write):**
+- "Cellular LTE / 5G band detection" — the AD8317 is a power detector, not a protocol decoder. It cannot identify LTE bands or distinguish LTE from CDMA from microwave-oven leakage.
+- "5 GHz WiFi monitoring" — firmware is 2.4 GHz only. No channel-hopping to UNII bands.
+- "MAC randomization defeated" — overclaim. Use "tracked across MAC rotation via 802.11 IE fingerprinting."
+- Specific cellular band lists (B2/B4/B12/N71). The device sees RF energy in those bands, but does not identify them.
+- Specific UUID filtering on BLE — not in firmware.
+- Specific tested detection range (e.g. "500–800 ft"). No tested range data exists in the repo. Detection range varies with source Tx power, antenna, terrain, band. Always caveat.
+
+When writing or editing copy, audit against this list. When in doubt, ask whether the firmware actually does the thing.
+
 ## Page Inventory
 1. **Home (`/`)** — telemetry strip → header → hero → capabilities → mobile app → olive panel → specifications → use cases → get started (demo + waitlist) → footer.
 2. **Product (`/product`)** — deep dive on TS-001 detection unit. Spec sheet, configurations, mounting options.
