@@ -10,7 +10,7 @@ const navItems = [
   { name: 'Technology', href: '/technology' },
   { name: 'App', href: '/app' },
   { name: 'Solutions', href: '/solutions' },
-  { name: 'Company', href: '/about' },
+  { name: 'Founders', href: '/founders' },
 ]
 
 export function Header() {
