@@ -9,10 +9,10 @@ const footerNav = {
     { name: 'Pricing', href: '/product#pricing' },
   ],
   company: [
-    { name: 'About', href: '/about' },
+    { name: 'Founders', href: '/founders' },
     { name: 'Contact', href: '/contact' },
     { name: 'FAQ', href: '/faq' },
-    { name: 'Careers', href: '/about#careers' },
+    { name: 'About', href: '/about' },
   ],
   legal: [
     { name: 'Privacy', href: '/privacy' },
