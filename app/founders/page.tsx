@@ -50,11 +50,11 @@ const founders: Founder[] = [
     role: 'Co-founder · CTO',
     src: '/images/cody.png',
     alt: 'Cody Schexnider, co-founder and CTO of TrailSense',
-    bio: [
-      'Cody is a software engineer who specializes in shipping computer vision and on-device ML to the edge. By day he is a Software Engineer III at Technergetics, where he architects Node and GraphQL microservices, builds React Native apps with offline-first ML inference, and converts PyTorch models into ExecuTorch and TensorFlow Lite for mobile deployment.',
-      "He is also the author of Deno-Redlock, an open-source distributed lock manager for the Deno runtime that crossed 170 GitHub stars and is the only library of its kind in that ecosystem. Before Technergetics he was a software engineer at Codesmith Engineering, teaching JavaScript fundamentals, data structures, and the full SDLC to junior engineers while refactoring the company's internal tools and public learning platform.",
-      'At TrailSense he owns the software stack end to end - the firmware running the proprietary detection engine on the ESP32-S3, the cloud ingest path, the iOS and Android app, and the on-device LLM that powers TrailSense AI. He holds a Secret security clearance and is finishing an Electrical Engineering degree at Lamar University.',
-    ],
+bio: [
+  'Cody works at the intersection of mobile software and machine learning, with a particular focus on getting models to run well on resource-constrained devices. As a Software Engineer III at Technergetics, he spends his days building React Native apps that perform real-time computer vision in the field, designing the GraphQL services behind them, and wrestling PyTorch models into formats that can actually run on a phone (ExecuTorch, TFLite, ONNX).',
+  "A few years back he wrote Deno-Redlock, a distributed lock manager built around the Redlock algorithm and Redis-backed Lua primitives. It remains the only library of its kind in the Deno ecosystem and has picked up a small but loyal following on GitHub. Earlier in his career, he taught at Codesmith Engineering, where he ran lectures on everything from JavaScript internals to CI/CD and mentored junior engineers through full product launches.",
+  'At TrailSense, Cody owns the software end-to-end: the firmware driving the detection engine on the ESP32-S3, the ingest pipeline, the mobile apps, and the on-device LLM that powers TrailSense AI. He holds a Secret clearance and is wrapping up an Electrical Engineering degree at Lamar — a deliberate move toward the RF and embedded work that increasingly defines what TrailSense is building.',
+],
     background: [
       'Software Engineer III, Technergetics - TypeScript / React, GraphQL microservices, React Native with on-device ML, end-to-end computer-vision pipelines (PyTorch -> ExecuTorch / TFLite)',
       'Author and maintainer of Deno-Redlock (170+ GitHub stars) - the first distributed lock manager for the Deno runtime',
