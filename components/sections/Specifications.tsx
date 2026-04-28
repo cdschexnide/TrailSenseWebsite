@@ -33,8 +33,8 @@ const specs: Spec[] = [
   },
   {
     key: 'Detection engine',
-    desc: 'Kalman-filtered RSSI fusion, IE fingerprinting, phantom-MAC suppression, cross-modal association.',
-    value: 'V2 FUSION',
+    desc: 'Purpose-built fingerprinting and fusion logic. Kalman-filtered RSSI, 802.11 IE fingerprinting, phantom-MAC suppression, cross-modal WiFi↔BLE association.',
+    value: 'IN-HOUSE',
   },
   {
     key: 'Localization',
@@ -71,7 +71,7 @@ export function Specifications() {
             </div>
             <h2 className="section-h2">Built for the field.</h2>
             <p className="section-dek">
-              Hardware: an AD8317 logarithmic RF detector behind a Nooelec LANA LNA, an ESP32-S3 running the V2 detection engine, an LTE PPP modem for backhaul. Effective range varies with source transmit power, antenna, terrain, and band — full performance characterization on request.
+              Hardware: an AD8317 logarithmic RF detector behind a Nooelec LANA LNA, an ESP32-S3 running our in-house detection engine, an LTE PPP modem for backhaul. Effective range varies with source transmit power, antenna, terrain, and band.
             </p>
           </div>
           <Link

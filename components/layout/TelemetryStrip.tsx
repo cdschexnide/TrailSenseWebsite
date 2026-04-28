@@ -13,8 +13,8 @@ export function TelemetryStrip() {
         </span>
         <span className="text-fg-disabled">/</span>
         <span className="flex items-center gap-1.5">
-          <span className="text-fg-disabled">ENGINE</span>
-          <span className="text-fg-secondary">V2 FUSION</span>
+          <span className="text-fg-disabled">DETECTOR</span>
+          <span className="text-fg-secondary">AD8317</span>
         </span>
         <span className="text-fg-disabled">/</span>
         <span className="flex items-center gap-1.5">

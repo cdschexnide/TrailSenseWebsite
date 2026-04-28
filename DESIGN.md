@@ -129,14 +129,14 @@ All values pulled from the company logo (olive military bg + dark badge + khaki 
 
 ## Marketing Claim Discipline
 
-Every spec claim on this site must be defensible against the firmware at `/Users/codyschexnider/Documents/Project/TrailSenseDevice`. The hardware is an AD8317 logarithmic RF power detector + Nooelec LANA LNA (20–4000 MHz, ~25 dB gain) + an ESP32-S3 running the V2 detection engine.
+Every spec claim on this site must be defensible against the firmware at `/Users/codyschexnider/Documents/Project/TrailSenseDevice`. The hardware is an AD8317 logarithmic RF power detector + Nooelec LANA LNA (20–4000 MHz, ~25 dB gain) + an ESP32-S3 running the in-house detection engine.
 
 **What is true:**
 - Three concurrent sensing channels: wideband analog RF (20–4000 MHz via AD8317 + LNA), 802.11 WiFi 2.4 GHz promiscuous-mode capture, BLE GAP passive scan.
 - 802.11 IE fingerprinting tracks devices across MAC randomization (one phone reads as one device).
 - BLE phone-likeness heuristic separates handsets from generic IoT trackers.
 - Wideband RF burst detection: noise-floor tracking + ≥10 dB threshold over 3 consecutive samples.
-- V2 detection engine: Kalman-filtered RSSI fusion, phantom-MAC suppression, cross-modal WiFi↔BLE association.
+- Purpose-built, in-house detection engine: Kalman-filtered RSSI fusion, phantom-MAC suppression, cross-modal WiFi↔BLE association. (Internal codename "V2" — never use that name in marketing copy.)
 - Multi-position multilateration ("triangulation") while platform moves.
 - LTE PPP backhaul to Golioth (CoAP/DTLS) or Nightingale Analytics.
 

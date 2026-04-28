@@ -56,7 +56,7 @@ export function Capabilities() {
             Three RF channels. One fused picture.
           </h2>
           <p className="section-dek">
-            Each TrailSense unit runs three concurrent sensing channels — a wideband analog RF detector, an 802.11 WiFi sniffer, and a passive BLE scanner. A V2 detection engine fuses the evidence and resolves the same device seen across multiple channels into one detection.
+            Each TrailSense unit runs three concurrent sensing channels — a wideband analog RF detector, an 802.11 WiFi sniffer, and a passive BLE scanner. Our in-house detection engine fuses the evidence and resolves the same device seen across multiple channels into one detection.
           </p>
         </div>
 
