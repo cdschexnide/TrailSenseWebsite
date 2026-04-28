@@ -111,7 +111,7 @@ export default function ProductPage() {
                   }}
                 />
                 <Image
-                  src="/images/device.png"
+                  src="/images/meerkat.png"
                   alt="TrailSense Meerkat"
                   width={420}
                   height={420}

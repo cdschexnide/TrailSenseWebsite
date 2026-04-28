@@ -66,8 +66,8 @@ export function Hero() {
             <Crosshair className="bottom-3 left-3" flipY />
             <Crosshair className="bottom-3 right-3" flipX flipY />
             <Image
-              src="/images/device.png"
-              alt="TrailSense detection unit"
+              src="/images/meerkat.png"
+              alt="TrailSense Meerkat detection unit"
               width={420}
               height={420}
               priority
