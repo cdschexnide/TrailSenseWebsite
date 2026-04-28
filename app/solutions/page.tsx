@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Tractor, Trees, HardHat, KeyRound, Mountain, Tent } from 'lucide-react'
+import { ArrowRight, Tractor, Trees, HardHat, KeyRound, Fuel, Tent } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Solutions',
@@ -51,13 +51,13 @@ const sectors = [
   },
   {
     num: '05',
-    icon: Mountain,
-    title: 'Trail and recreation systems',
+    icon: Fuel,
+    title: 'Oil & gas sites',
     challenge:
-      'Public or semi-public trail networks where after-hours intrusion or restricted-zone access is the concern. Staff cannot watch every entry point.',
+      "Operators run hundreds of unmanned wellpads, tank batteries, compressor stations, and gathering corridors across remote acreage in the Permian, Bakken, Eagle Ford, and Marcellus. Copper theft, frac-sand theft, pump-down hydrocarbon theft, and instrument vandalism all run high. Cameras need grid power and a connectivity drop that most pads don't have; fencing thousands of acres of lease is not economical and does nothing against a truck rolling up to a tank battery at 2 AM.",
     approach:
-      'Units at trailheads, restricted-area boundaries, and parking lots. Whitelist staff and known frequent users so the alert feed reflects unusual activity, not regulars.',
-    typical: '1 unit per major access point; cluster at high-traffic intersections',
+      "TrailSense units mount at wellpads, tank batteries, compressor stations, and access-road choke points. Each unit passively detects anyone arriving with a phone - your crews, your service contractors, and anyone else. Solar power and onboard LTE mean the unit deploys on a pad with no service drop and runs for years. The detection engine's whitelist suppresses your operations team and approved vendors, so the alert feed shows only unaccounted activity at sites that are supposed to be empty.",
+    typical: '1 unit per wellpad or tank battery; 2-3 units along high-value gathering-line corridors',
   },
   {
     num: '06',
