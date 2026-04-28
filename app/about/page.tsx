@@ -81,11 +81,6 @@ export default function CompanyPage() {
               body="The mobile app's AI assistant runs as a local LLM on your phone. Your detection data never leaves the device unless you explicitly export it."
             />
             <Value
-              num="03"
-              title="No subscription lock-in"
-              body="The hardware is yours. The software updates are free. The only recurring cost is your unit's LTE data plan, which you can swap for satellite if you prefer."
-            />
-            <Value
               num="04"
               title="Defensible claims"
               body="We will not invent specs. Every range, sensitivity, and capability claim on this site maps to firmware that ships. If the hardware can't do it, we won't print it."
