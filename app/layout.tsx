@@ -1,15 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { TelemetryStrip } from '@/components/layout/TelemetryStrip'
 import { siteConfig } from '@/lib/data/site-config'
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -27,17 +21,12 @@ export const metadata: Metadata = {
     'remote property monitoring',
     'rural security',
     'intrusion detection',
-    'ESP32 security',
-    'property surveillance',
-    'trail security',
-    'land monitoring',
+    'passive perimeter detection',
+    'ranch security',
+    'conservation perimeter',
+    'tactical surveillance',
   ],
-  authors: [
-    {
-      name: siteConfig.name,
-      url: siteConfig.url,
-    },
-  ],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   openGraph: {
     type: 'website',
@@ -87,11 +76,26 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="min-h-screen bg-white font-sans antialiased">
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.bunny.net" />
+        <link
+          href="https://fonts.bunny.net/css?family=geist:300,400,500,600,700|geist-mono:400,500,600|cabinet-grotesk:500,700,800,900&display=swap"
+          rel="stylesheet"
+        />
+        <style>{`
+          :root {
+            --font-display: 'Cabinet Grotesk', 'Geist', system-ui, sans-serif;
+            --font-body: 'Geist', system-ui, sans-serif;
+            --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
+          }
+        `}</style>
+      </head>
+      <body className="min-h-screen bg-bg-deepest font-sans antialiased text-fg-primary">
         <div className="relative flex min-h-screen flex-col">
+          <TelemetryStrip />
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="relative z-[1] flex-1">{children}</main>
           <Footer />
         </div>
       </body>

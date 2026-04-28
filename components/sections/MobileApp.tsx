@@ -1,72 +1,90 @@
 import Image from 'next/image'
 
-const appScreens = [
+type Feature = {
+  num: string
+  tag: string
+  title: string
+  body: string
+  src: string
+  alt: string
+}
+
+const features: Feature[] = [
   {
-    name: 'Live Radar',
-    description: 'Real-time visualization of detections with distance and threat level indicators',
-    image: '/images/app/LiveRadar.png',
+    num: '01',
+    tag: 'COMPASS',
+    title: 'Find any unit, as the crow flies.',
+    body: 'A live directional bearing to any deployed TrailSense unit. Pulled from GPS, refreshed in real time. For when you need the unit, not the route to it.',
+    src: '/images/app-compass.png',
+    alt: 'TrailSense app — compass feature pointing to a deployed unit',
   },
   {
-    name: 'Analytics Dashboard',
-    description: 'Track detection patterns, peak hours, and device types over time',
-    image: '/images/app/AnalyticsDashboard.png',
+    num: '02',
+    tag: 'ROUTE',
+    title: 'Drivable navigation to your unit.',
+    body: 'When the property is bigger than line-of-sight, the app gives you turn-by-turn navigation along ranch roads, fire trails, and access tracks.',
+    src: '/images/app-route.png',
+    alt: 'TrailSense app — route feature showing navigation to a unit',
   },
   {
-    name: 'Device Management',
-    description: 'Monitor battery levels, signal strength, and detection counts across all units',
-    image: '/images/app/Devices.png',
-  },
-  {
-    name: 'Smart Alerts',
-    description: 'Prioritized notifications with one-tap whitelist and threat management',
-    image: '/images/app/Alerts.png',
+    num: '03',
+    tag: 'TRAILSENSE AI',
+    title: "Ask the property what's happening.",
+    body: 'An on-device LLM with full access to your unit data. Ask for a situation report, query alert history, or surface anomalies — all running locally, no cloud.',
+    src: '/images/app-ai.png',
+    alt: 'TrailSense AI — on-device assistant chat interface',
   },
 ]
 
 export function MobileApp() {
   return (
-    <div className="bg-earth-900 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary-400">
-            Mobile Command Center
+    <section className="border-b border-hairline">
+      <div className="container-page py-24">
+        <div className="label-row">COMPANION APP · 02</div>
+        <div className="mb-16 max-w-[720px]">
+          <div className="coords">
+            <span className="khaki">iOS · ANDROID</span>
+            <span className="num">{'// TRAILSENSE.APP'}</span>
+          </div>
+          <h2 className="section-h2">
+            Find your units. Read the field. Ask the AI.
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Complete control from anywhere
-          </p>
-          <p className="mt-6 text-lg leading-8 text-earth-300">
-            Monitor your property in real-time with our powerful mobile app. Get instant alerts,
-            analyze patterns, and manage all your devices from a single intuitive interface.
+          <p className="section-dek">
+            The TrailSense app turns deployed hardware into a live picture of the property. Find any unit by compass or route, see every detected device on a tactical map, and ask an on-device LLM for a real-time situation report.
           </p>
         </div>
 
-        {/* App screenshots grid */}
-        <div className="mx-auto mt-16 max-w-6xl sm:mt-20">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {appScreens.map((screen) => (
-              <div key={screen.name} className="flex flex-col items-center">
-                {/* Phone mockup frame */}
-                <div className="relative w-full max-w-[240px] aspect-[9/19] rounded-[2.5rem] bg-earth-800 p-2 ring-1 ring-earth-700 shadow-2xl">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 h-6 w-20 bg-earth-800 rounded-b-xl" />
-                  <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-black">
-                    <Image
-                      src={screen.image}
-                      alt={screen.name}
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    />
-                  </div>
-                </div>
-                {/* Label */}
-                <h3 className="mt-6 text-lg font-semibold text-white">{screen.name}</h3>
-                <p className="mt-2 text-sm text-earth-400 text-center">{screen.description}</p>
+        <div className="grid gap-8 md:grid-cols-3">
+          {features.map((f) => (
+            <div key={f.num} className="flex flex-col">
+              <div className="relative mb-6 grid aspect-[0.7] place-items-center overflow-hidden rounded border border-hairline bg-bg-elevated p-6">
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-20"
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(#38392A 1px, transparent 1px), linear-gradient(90deg, #38392A 1px, transparent 1px)',
+                    backgroundSize: '28px 28px',
+                  }}
+                />
+                <Image
+                  src={f.src}
+                  alt={f.alt}
+                  width={300}
+                  height={650}
+                  className="relative z-[1] max-h-full w-auto max-w-[240px] rounded-[28px] object-contain shadow-[0_24px_48px_rgba(0,0,0,0.5)]"
+                />
               </div>
-            ))}
-          </div>
+              <div className="mb-2 font-mono text-[10px] uppercase tracking-spaced text-gold">
+                FEATURE · {f.num} · {f.tag}
+              </div>
+              <h3 className="mb-2 font-display text-[22px] font-bold leading-tight tracking-display-snug text-fg-primary">
+                {f.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-fg-secondary">{f.body}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

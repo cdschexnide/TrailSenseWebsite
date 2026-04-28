@@ -1,93 +1,80 @@
-import Link from 'next/link'
-import { Tractor, Mountain, Trees, HardHat, Tent, KeyRound } from 'lucide-react'
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+type Sector = {
+  num: string
+  title: string
+  body: string
+  gradient: string
+}
 
-const useCases = [
+const sectors: Sector[] = [
   {
-    name: 'Rural Property',
-    description: 'Monitor remote land, farms, and ranches. Detect trespassers across large acreage without fencing or cameras.',
-    icon: Tractor,
-    coverage: '15-25+ acres per unit',
+    num: '01',
+    title: 'Large-acreage ranches',
+    body: 'Perimeter coverage on 500+ acre cattle and game ranches.',
+    gradient: 'linear-gradient(135deg, #2a3015 0%, #14160E 100%)',
   },
   {
-    name: 'Trail Systems',
-    description: 'Secure hiking trails, access points, and recreational areas. Know when someone enters restricted zones.',
-    icon: Mountain,
-    coverage: '800+ ft detection range',
+    num: '02',
+    title: 'Conservation reserves',
+    body: 'Anti-poaching alerts on protected land and wildlife corridors.',
+    gradient: 'linear-gradient(135deg, #322a18 0%, #14160E 100%)',
   },
   {
-    name: 'Wildlife Protection',
-    description: 'Protect conservation areas and wildlife habitats from unauthorized access. Non-invasive passive detection.',
-    icon: Trees,
-    coverage: 'Multiple detection bands',
+    num: '03',
+    title: 'Industrial sites',
+    body: 'Perimeter intrusion data for solar farms, oil fields, telecom towers.',
+    gradient: 'linear-gradient(135deg, #1f2418 0%, #14160E 100%)',
   },
   {
-    name: 'Construction Sites',
-    description: 'After-hours security for construction equipment and materials. Instant alerts for nighttime intrusions.',
-    icon: HardHat,
-    coverage: 'Battery or solar powered',
-  },
-  {
-    name: 'Campground Management',
-    description: 'Monitor check-in areas, restricted zones, and facility access. Manage authorized vs unauthorized visitors.',
-    icon: Tent,
-    coverage: 'Whitelist management',
-  },
-  {
-    name: 'Private Roads',
-    description: 'Gate and entrance monitoring for private drives, service roads, and access routes to remote properties.',
-    icon: KeyRound,
-    coverage: 'Real-time notifications',
+    num: '04',
+    title: 'Tactical / LE',
+    body: 'Deployable surveillance for state, federal, and special-use teams.',
+    gradient: 'linear-gradient(135deg, #2c2418 0%, #14160E 100%)',
   },
 ]
 
 export function UseCases() {
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary-600">
-            Versatile Applications
-          </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-            Built for diverse security needs
-          </p>
-          <p className="mt-6 text-lg leading-8 text-earth-600">
-            From vast rural properties to specific access points, TrailSense adapts to your unique monitoring requirements.
+    <section className="border-b border-hairline">
+      <div className="container-page py-24">
+        <div className="label-row">DEPLOYMENTS · 04</div>
+        <div className="mb-16 max-w-[720px]">
+          <div className="coords">
+            <span className="khaki">FIELD APPLICATIONS</span>
+            <span className="num">{'// 04 SECTORS'}</span>
+          </div>
+          <h2 className="section-h2">Where TrailSense is in the ground.</h2>
+          <p className="section-dek">
+            From private ranches to managed conservation areas to perimeter lines on staffed sites, every deployment is tuned to the property&apos;s actual threat profile.
           </p>
         </div>
 
-        {/* Use case grid */}
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:max-w-none lg:grid-cols-3">
-          {useCases.map((useCase) => (
-            <Card key={useCase.name} className="hover:shadow-lg transition-all hover:border-primary-200">
-              <CardHeader>
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-sage-500/10">
-                  <useCase.icon className="h-6 w-6 text-sage-700" aria-hidden="true" />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {sectors.map((s) => (
+            <article
+              key={s.num}
+              className="overflow-hidden rounded border border-hairline bg-bg-surface"
+            >
+              <div
+                className="relative h-40"
+                style={{ backgroundImage: s.gradient }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bg-deepest/85" />
+              </div>
+              <div className="p-5">
+                <div className="mb-2 font-mono text-[10px] uppercase tracking-spaced text-gold">
+                  SECTOR · {s.num}
                 </div>
-                <CardTitle className="text-xl">{useCase.name}</CardTitle>
-                <CardDescription className="mt-2 text-base">
-                  {useCase.description}
-                </CardDescription>
-                <div className="mt-4 inline-flex items-center text-xs font-medium text-primary-700 bg-primary-50 px-2.5 py-1 rounded">
-                  {useCase.coverage}
-                </div>
-              </CardHeader>
-            </Card>
+                <h4 className="mb-1.5 font-display text-[17px] font-bold leading-tight text-fg-primary">
+                  {s.title}
+                </h4>
+                <p className="text-[13px] leading-relaxed text-fg-secondary">
+                  {s.body}
+                </p>
+              </div>
+            </article>
           ))}
         </div>
-
-        {/* CTA */}
-        <div className="mt-16 flex justify-center">
-          <Link
-            href="/solutions"
-            className="text-base font-semibold leading-7 text-primary-700 hover:text-primary-800 transition-colors"
-          >
-            Explore all use cases and applications <span aria-hidden="true">→</span>
-          </Link>
-        </div>
       </div>
-    </div>
+    </section>
   )
 }

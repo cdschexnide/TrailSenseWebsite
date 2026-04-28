@@ -5,7 +5,9 @@
       "Bash(npm install)",
       "Bash(npm run dev:*)",
       "Bash(npm run build:*)",
-      "mcp__puppeteer__puppeteer_navigate"
+      "mcp__puppeteer__puppeteer_navigate",
+      "Bash(rm ~/.claude/skills/gstack)",
+      "Bash(git clone *)"
     ],
     "deny": [],
     "ask": []

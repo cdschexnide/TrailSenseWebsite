@@ -4,36 +4,94 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 60 14% 21%;
-    --card: 0 0% 100%;
-    --card-foreground: 60 14% 21%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 60 14% 21%;
-    --primary: 60 16% 36%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 60 12% 47%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 60 8% 95%;
-    --muted-foreground: 60 10% 32%;
-    --accent: 30 20% 56%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 60 8% 88%;
-    --input: 60 8% 88%;
-    --ring: 60 16% 36%;
-    --radius: 0.5rem;
+    --radius: 4px;
   }
+
+  * {
+    @apply border-hairline;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: #0A0C06;
+  }
+
+  body {
+    @apply bg-bg-deepest text-fg-primary font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  /* Selection */
+  ::selection {
+    background: #E0B341;
+    color: #0A0C06;
+  }
+
+  /* Topographic background texture — global, fixed, ultra-subtle */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.025;
+    background-image:
+      radial-gradient(ellipse 800px 600px at 30% 20%, transparent 40%, #ECE6D6 41%, transparent 42%),
+      radial-gradient(ellipse 700px 500px at 30% 20%, transparent 50%, #ECE6D6 51%, transparent 52%),
+      radial-gradient(ellipse 600px 400px at 30% 20%, transparent 60%, #ECE6D6 61%, transparent 62%),
+      radial-gradient(ellipse 900px 700px at 75% 70%, transparent 40%, #ECE6D6 41%, transparent 42%),
+      radial-gradient(ellipse 800px 600px at 75% 70%, transparent 50%, #ECE6D6 51%, transparent 52%);
+  }
+
+  /* Focus rings */
+  *:focus-visible {
+    outline: 2px solid #E0B341;
+    outline-offset: 2px;
+  }
+
+  /* Hairline scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: #0A0C06; }
+  ::-webkit-scrollbar-thumb { background: #38392A; border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: #4D4E36; }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-container px-6 md:px-8;
   }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+
+  /* Eyebrow rule + label (used at the top of major sections) */
+  .label-row {
+    @apply flex items-center gap-3 font-mono text-[11px] uppercase tracking-spaced text-fg-disabled pt-8 mb-14;
+  }
+  .label-row::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: #E0B341;
+  }
+
+  /* Mono coordinate stamp */
+  .coords {
+    @apply flex gap-4 font-mono text-[11px] uppercase tracking-spaced text-fg-disabled mb-4;
+  }
+  .coords .num { @apply text-gold; }
+  .coords .khaki { @apply text-khaki; }
+
+  /* Section heading combo */
+  .section-h2 {
+    @apply font-display font-bold leading-[1.05] tracking-display-tight text-fg-primary text-balance text-3xl md:text-5xl mb-4;
+  }
+  .section-dek {
+    @apply text-base text-fg-secondary leading-relaxed max-w-[560px];
+  }
+
+  /* Pulse dot (status active) */
+  .pulse-dot {
+    @apply inline-block w-1.5 h-1.5 rounded-full bg-status-active;
+    box-shadow: 0 0 10px #6BBF59;
+    animation: pulse 1.6s ease-in-out infinite;
   }
 }
 
@@ -41,23 +99,10 @@
   .text-balance {
     text-wrap: balance;
   }
-}
-
-/* Custom smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Improved focus states for accessibility */
-@layer base {
-  * {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2;
+  .text-pretty {
+    text-wrap: pretty;
   }
-}
-
-/* Smooth transitions for interactive elements */
-@layer components {
-  .transition-smooth {
-    @apply transition-all duration-300 ease-in-out;
+  .tabular {
+    font-variant-numeric: tabular-nums;
   }
 }
