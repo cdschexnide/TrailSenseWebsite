@@ -39,7 +39,7 @@ export function Footer() {
             </span>
           </Link>
           <p className="mb-4 max-w-[340px] font-display text-xl font-bold leading-tight text-fg-primary">
-            Built for property that doesn&apos;t fit inside a fence.
+            Built for property that doesn't fit inside a fence.
           </p>
           <p className="font-mono text-[11px] uppercase tracking-spaced text-fg-disabled">
             © 2026 · TRAILSENSE INC · MADE IN THE U.S.

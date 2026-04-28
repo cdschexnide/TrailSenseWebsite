@@ -37,11 +37,11 @@ export default function WaitlistPage() {
         </div>
 
         <h1 className="mb-6 font-display text-4xl font-extrabold leading-[0.96] tracking-display-tight text-fg-primary md:text-5xl">
-          Get on the list. <span className="text-gold">We&apos;ll reach out.</span>
+          Get on the list. <span className="text-gold">We'll reach out.</span>
         </h1>
 
         <p className="mb-10 text-lg text-fg-secondary">
-          TrailSense rolls out by region. Drop your email and tell us roughly where the property is - we&apos;ll reach out as units become available in your area, and again when major capability releases ship.
+          TrailSense rolls out by region. Drop your email and tell us roughly where the property is - we'll reach out as units become available in your area, and again when major capability releases ship.
         </p>
 
         {status === 'ok' ? (
@@ -50,10 +50,10 @@ export default function WaitlistPage() {
               <Check className="h-4 w-4" /> ON THE LIST
             </div>
             <h2 className="mb-3 font-display text-2xl font-bold text-fg-primary">
-              You&apos;re queued.
+              You're queued.
             </h2>
             <p className="mb-6 text-fg-secondary">
-              Watch your inbox. If a unit opens up in your region in the next 30 days, you&apos;ll hear from us. Major release announcements come once or twice a year - never marketing spam.
+              Watch your inbox. If a unit opens up in your region in the next 30 days, you'll hear from us. Major release announcements come once or twice a year - never marketing spam.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -120,7 +120,7 @@ export default function WaitlistPage() {
             )}
 
             <p className="font-mono text-[10px] uppercase tracking-spaced text-fg-disabled">
-              We&apos;ll only email you about availability and major releases. No marketing spam.
+              We'll only email you about availability and major releases. No marketing spam.
             </p>
           </form>
         )}

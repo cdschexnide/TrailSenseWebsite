@@ -56,7 +56,7 @@ export default function TechnologyPage() {
         icon={Wifi}
         title="802.11 management-frame capture."
         body={[
-          "The WiFi radio runs in promiscuous mode and captures probe requests and beacons broadcast by every WiFi-enabled device in range. Each frame yields a source MAC, an RSSI, and a set of 802.11 information elements (IEs) describing the device&apos;s hardware capabilities.",
+          "The WiFi radio runs in promiscuous mode and captures probe requests and beacons broadcast by every WiFi-enabled device in range. Each frame yields a source MAC, an RSSI, and a set of 802.11 information elements (IEs) describing the device's hardware capabilities.",
           "Modern phones randomize their MAC for privacy. Our detection engine works around this by hashing the IE fields - supported rates, HT/VHT/HE capabilities - which do not change when the MAC rotates. The fingerprint is the same; only the address has changed.",
           "Note: this channel is 2.4 GHz only. The WiFi radio does not channel-hop into the 5 GHz UNII band. If a device is 5 GHz only, we will not see it on this channel.",
         ]}
@@ -107,12 +107,12 @@ export default function TechnologyPage() {
             <EngineCard
               num="01"
               title="IE fingerprinting"
-              body="When a device randomizes its MAC, its hardware capabilities don&apos;t change. We hash 802.11 IEs (supported rates, HT, VHT, HE) into a fingerprint that survives MAC rotation. One phone reads as one device, not twelve."
+              body="When a device randomizes its MAC, its hardware capabilities don't change. We hash 802.11 IEs (supported rates, HT, VHT, HE) into a fingerprint that survives MAC rotation. One phone reads as one device, not twelve."
             />
             <EngineCard
               num="02"
               title="Burst-timing signatures"
-              body="Two devices with identical IE fingerprints get separated by inter-probe timing. We track the mean and variance of probe intervals using Welford&apos;s online algorithm and split fingerprints whose timing patterns diverge."
+              body="Two devices with identical IE fingerprints get separated by inter-probe timing. We track the mean and variance of probe intervals using Welford's online algorithm and split fingerprints whose timing patterns diverge."
             />
             <EngineCard
               num="03"
@@ -127,7 +127,7 @@ export default function TechnologyPage() {
             <EngineCard
               num="05"
               title="Persistence pool"
-              body="A pool of recent fingerprints persists across detection windows so the same device isn&apos;t re-counted as new every cycle. LRU eviction when the pool fills."
+              body="A pool of recent fingerprints persists across detection windows so the same device isn't re-counted as new every cycle. LRU eviction when the pool fills."
             />
             <EngineCard
               num="06"

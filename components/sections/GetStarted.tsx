@@ -16,7 +16,7 @@ export function GetStarted() {
           </div>
           <h2 className="section-h2">Two ways to get on the radar.</h2>
           <p className="section-dek">
-            Talk to us about a deployment that&apos;s already mapped, or get on the waitlist and we&apos;ll reach out as units come available in your region.
+            Talk to us about a deployment that's already mapped, or get on the waitlist and we'll reach out as units come available in your region.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export function GetStarted() {
               Join the waitlist.
             </h3>
             <p className="mb-8 text-fg-secondary">
-              Not ready for a demo? Drop your email and we&apos;ll reach out when units are deploying in your area, or when major capability releases ship.
+              Not ready for a demo? Drop your email and we'll reach out when units are deploying in your area, or when major capability releases ship.
             </p>
             <WaitlistForm />
           </div>
@@ -98,7 +98,7 @@ function WaitlistForm() {
   if (status === 'ok') {
     return (
       <div className="rounded-sm border border-status-active/40 bg-status-active/10 p-5 font-mono text-[12px] uppercase tracking-spaced text-status-active">
-        ✓ ON THE LIST · WE&apos;LL REACH OUT
+        ✓ ON THE LIST · WE'LL REACH OUT
       </div>
     )
   }

@@ -99,7 +99,7 @@ export default function AppPage() {
             </div>
             <h2 className="section-h2">Find. Read. Ask.</h2>
             <p className="section-dek">
-              The app is built around how property owners actually work in the field: locate the hardware, read what it&apos;s seeing, and ask the AI for what matters now.
+              The app is built around how property owners actually work in the field: locate the hardware, read what it's seeing, and ask the AI for what matters now.
             </p>
           </div>
 
@@ -233,7 +233,7 @@ export default function AppPage() {
                 Get on the waitlist.
               </h3>
               <p className="mb-8 text-fg-secondary">
-                Drop your email and we&apos;ll reach out as units come available in your region.
+                Drop your email and we'll reach out as units come available in your region.
               </p>
               <Link
                 href="/waitlist"

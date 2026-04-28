@@ -20,7 +20,7 @@ export default function CompanyPage() {
               <span className="num">{'// EST. 2024'}</span>
             </div>
             <h1 className="mb-7 font-display text-4xl font-extrabold leading-[0.96] tracking-display-tight text-fg-primary text-balance sm:text-6xl lg:text-7xl">
-              We build for property that <span className="text-gold">doesn&apos;t fit inside a fence.</span>
+              We build for property that <span className="text-gold">doesn't fit inside a fence.</span>
             </h1>
             <p className="max-w-[640px] text-lg leading-relaxed text-fg-secondary">
               TrailSense is a small team of engineers who got tired of watching ranchers, conservation managers, and remote-property owners try to monitor thousands of acres with cameras designed for a doorbell. We built passive RF sensors and the software to make sense of them. Every unit ships with hardware we picked, firmware we wrote, and a detection engine we own.
@@ -38,7 +38,7 @@ export default function CompanyPage() {
               <span className="khaki">WHY THIS EXISTS</span>
               <span className="num">{'// THE GAP'}</span>
             </div>
-            <h2 className="section-h2">Cameras don&apos;t scale to land.</h2>
+            <h2 className="section-h2">Cameras don't scale to land.</h2>
             <p className="section-dek">
               500 acres of cattle land, a 12-mile fire road, an off-grid solar farm. None of those properties have the line-of-sight, the bandwidth, or the staffing to make a camera-based system work. They need sensors that pick up active devices passing through, not pixels of trees moving in wind.
             </p>
@@ -48,12 +48,12 @@ export default function CompanyPage() {
             <ValueCard
               tag="THE PROBLEM"
               title="Properties bigger than a single field of view."
-              body="Game cameras catch one trail. Doorbell cams catch one door. A 500-acre property has thousands of feet of perimeter and dozens of access paths. Traditional security gear assumes a built environment that simply isn&apos;t there."
+              body="Game cameras catch one trail. Doorbell cams catch one door. A 500-acre property has thousands of feet of perimeter and dozens of access paths. Traditional security gear assumes a built environment that simply isn't there."
             />
             <ValueCard
               tag="THE APPROACH"
               title="Detect the device, not the body."
-              body="Almost every person crossing a property carries a phone. We listen for that phone&apos;s active radios - WiFi, Bluetooth, and wideband RF - across hundreds of feet, with no cameras and no active transmission of our own."
+              body="Almost every person crossing a property carries a phone. We listen for that phone's active radios - WiFi, Bluetooth, and wideband RF - across hundreds of feet, with no cameras and no active transmission of our own."
             />
           </div>
         </div>
@@ -64,9 +64,9 @@ export default function CompanyPage() {
         <div className="container-page py-24">
           <div className="label-row">VALUES · 02</div>
           <div className="mb-16 max-w-[720px]">
-            <h2 className="section-h2">What we won&apos;t compromise.</h2>
+            <h2 className="section-h2">What we won't compromise.</h2>
             <p className="section-dek">
-              These aren&apos;t marketing values. They are concrete engineering and product decisions that constrain what we will and will not ship.
+              These aren't marketing values. They are concrete engineering and product decisions that constrain what we will and will not ship.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -78,17 +78,17 @@ export default function CompanyPage() {
             <Value
               num="02"
               title="On-device first"
-              body="The mobile app&apos;s AI assistant runs as a local LLM on your phone. Your detection data never leaves the device unless you explicitly export it."
+              body="The mobile app's AI assistant runs as a local LLM on your phone. Your detection data never leaves the device unless you explicitly export it."
             />
             <Value
               num="03"
               title="No subscription lock-in"
-              body="The hardware is yours. The software updates are free. The only recurring cost is your unit&apos;s LTE data plan, which you can swap for satellite if you prefer."
+              body="The hardware is yours. The software updates are free. The only recurring cost is your unit's LTE data plan, which you can swap for satellite if you prefer."
             />
             <Value
               num="04"
               title="Defensible claims"
-              body="We will not invent specs. Every range, sensitivity, and capability claim on this site maps to firmware that ships. If the hardware can&apos;t do it, we won&apos;t print it."
+              body="We will not invent specs. Every range, sensitivity, and capability claim on this site maps to firmware that ships. If the hardware can't do it, we won't print it."
             />
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function CompanyPage() {
                 Get on the waitlist.
               </h3>
               <p className="mb-8 text-fg-secondary">
-                We deploy by region. Tell us where the property is and we&apos;ll reach out as units open up.
+                We deploy by region. Tell us where the property is and we'll reach out as units open up.
               </p>
               <Link
                 href="/waitlist"

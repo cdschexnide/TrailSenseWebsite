@@ -44,7 +44,7 @@ export function UseCases() {
           </div>
           <h2 className="section-h2">Where TrailSense is in the ground.</h2>
           <p className="section-dek">
-            From private ranches to managed conservation areas to perimeter lines on staffed sites, every deployment is tuned to the property&apos;s actual threat profile.
+            From private ranches to managed conservation areas to perimeter lines on staffed sites, every deployment is tuned to the property's actual threat profile.
           </p>
         </div>
 

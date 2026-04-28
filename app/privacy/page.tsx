@@ -27,9 +27,9 @@ export default function PrivacyPolicyPage() {
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <div className="prose prose-lg prose-earth max-w-none">
             <p className="text-lg leading-8 text-earth-600">
-              {company.legalName} (&quot;TrailSense,&quot; &quot;we,&quot;
-              &quot;us,&quot; or &quot;our&quot;) operates the TrailSense mobile
-              application (the &quot;App&quot;) and related services. This
+              {company.legalName} ("TrailSense," "we,"
+              "us," or "our") operates the TrailSense mobile
+              application (the "App") and related services. This
               Privacy Policy explains how we collect, use, store, and protect
               your information when you use our App and services.
             </p>
@@ -132,7 +132,7 @@ export default function PrivacyPolicyPage() {
 
             <Section title="3. Data Storage and Security">
               <p>
-                Authentication tokens are stored in your device&apos;s encrypted
+                Authentication tokens are stored in your device's encrypted
                 secure storage (iOS Keychain / Android Keystore). App
                 preferences and settings are stored locally on your device.
                 Account data, detection history, and alerts are stored on our
@@ -234,11 +234,11 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>Manage notifications:</strong> You can enable or
                   disable push notifications in the App settings or through your
-                  device&apos;s system settings.
+                  device's system settings.
                 </li>
                 <li>
                   <strong>Location permissions:</strong> You can revoke location
-                  access at any time through your device&apos;s system settings.
+                  access at any time through your device's system settings.
                 </li>
                 <li>
                   <strong>Known devices:</strong> You can whitelist known devices

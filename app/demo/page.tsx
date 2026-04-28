@@ -60,7 +60,7 @@ export default function DemoPage() {
             Demo request <span className="text-gold">confirmed.</span>
           </h1>
           <p className="mb-10 text-lg text-fg-secondary">
-            We&apos;ll reach out within one business day to schedule a 30-minute walkthrough. In the meantime, expect a confirmation email at the address you provided.
+            We'll reach out within one business day to schedule a 30-minute walkthrough. In the meantime, expect a confirmation email at the address you provided.
           </p>
           <a
             href="/"
@@ -101,7 +101,7 @@ export default function DemoPage() {
               ALSO OFFERED
             </div>
             <p className="mb-4 text-sm text-fg-secondary">
-              Not ready for a demo? Get on the waitlist and we&apos;ll reach out as units come available in your region.
+              Not ready for a demo? Get on the waitlist and we'll reach out as units come available in your region.
             </p>
             <a
               href="/waitlist"

@@ -107,9 +107,9 @@ export default function ContactPage() {
         <div className="container-page py-24">
           <div className="label-row">COMMON INQUIRIES · 03</div>
           <div className="mb-12 max-w-[720px]">
-            <h2 className="section-h2">If your question fits one of these, write &quot;[type]&quot; in the subject.</h2>
+            <h2 className="section-h2">If your question fits one of these, write "[type]" in the subject.</h2>
             <p className="section-dek">
-              It routes faster. Otherwise just send the email - we&apos;ll figure it out.
+              It routes faster. Otherwise just send the email - we'll figure it out.
             </p>
           </div>
           <div className="grid gap-1 overflow-hidden rounded border border-hairline bg-hairline md:grid-cols-2 lg:grid-cols-4">

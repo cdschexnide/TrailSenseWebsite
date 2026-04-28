@@ -24,7 +24,7 @@ const sectors = [
     icon: Trees,
     title: 'Conservation reserves',
     challenge:
-      'Anti-poaching, anti-trespass, and habitat-monitoring on protected land. Cameras spook wildlife and require maintenance the staff doesn&apos;t have. Patrols are sparse and predictable.',
+      "Anti-poaching, anti-trespass, and habitat-monitoring on protected land. Cameras spook wildlife and require maintenance the staff doesn't have. Patrols are sparse and predictable.",
     approach:
       'Hidden, passive sensors at known intrusion paths and wildlife corridors. No light, no sound, no transmission. Detected devices get logged with timestamp and approximate position; alerts fire to staff and partner agencies.',
     typical: 'Per-corridor deployment, scaled to known access routes',
@@ -36,7 +36,7 @@ const sectors = [
     challenge:
       'Solar farms, oil and gas fields, telecom towers, water treatment. Long perimeters, valuable equipment, theft and sabotage risk after hours. Existing alarm systems trip on wildlife and weather.',
     approach:
-      'Perimeter line of TrailSense units, each covering several hundred feet of fenceline. The detection engine&apos;s phantom-MAC suppression and confidence scoring keep false-positive rates low so on-call staff don&apos;t burn out.',
+      "Perimeter line of TrailSense units, each covering several hundred feet of fenceline. The detection engine's phantom-MAC suppression and confidence scoring keep false-positive rates low so on-call staff don't burn out.",
     typical: '1 unit per 300-500 ft of perimeter, depending on threat profile',
   },
   {
@@ -44,7 +44,7 @@ const sectors = [
     icon: KeyRound,
     title: 'Gated drives & private roads',
     challenge:
-      'Long access roads on remote homes and lodges. Gate cameras work for the gate; they don&apos;t cover the alternate paths a determined trespasser will use.',
+      "Long access roads on remote homes and lodges. Gate cameras work for the gate; they don't cover the alternate paths a determined trespasser will use.",
     approach:
       'A small set of units along the access road and at known bypass points. Detection logs every device that passes through, whether they came through the gate or not.',
     typical: '2-4 units for a typical drive, plus alternate-path coverage',
@@ -86,7 +86,7 @@ export default function SolutionsPage() {
               Where TrailSense is <span className="text-gold">in the ground.</span>
             </h1>
             <p className="max-w-[640px] text-lg leading-relaxed text-fg-secondary">
-              Six deployment patterns we&apos;ve seen work. Every property is different - the unit count, placement, and alert thresholds get tuned to your specific terrain, threat profile, and staffing model. Start with one of these, then we adapt.
+              Six deployment patterns we've seen work. Every property is different - the unit count, placement, and alert thresholds get tuned to your specific terrain, threat profile, and staffing model. Start with one of these, then we adapt.
             </p>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function SolutionsPage() {
             />
             <Note
               title="Range is not a number."
-              body="Effective range varies with source transmit power, antenna, and terrain. A phone in line-of-sight reads further than a phone behind a hill. We map your actual property; we don&apos;t print one number."
+              body="Effective range varies with source transmit power, antenna, and terrain. A phone in line-of-sight reads further than a phone behind a hill. We map your actual property; we don't print one number."
             />
           </div>
         </div>

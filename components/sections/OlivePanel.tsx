@@ -15,7 +15,7 @@ export function OlivePanel() {
               &ldquo;
             </span>
             <h2 className="mb-4 max-w-[560px] font-display text-3xl font-bold leading-[1.05] tracking-display-tight text-fg-primary lg:text-4xl">
-              Built for property that doesn&apos;t fit inside a fence.
+              Built for property that doesn't fit inside a fence.
             </h2>
             <p className="max-w-[560px] text-fg-secondary">
               500-acre cattle ranches. Anti-poaching corridors. Solar farms in the high desert. Wherever a perimeter is too long to staff and too important to leave unwatched, TrailSense puts a passive sensor in the ground and a live picture in your pocket.

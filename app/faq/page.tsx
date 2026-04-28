@@ -70,7 +70,7 @@ const categories = [
       },
       {
         q: 'Where does my detection data live?',
-        a: 'Detection events are sent over LTE to a backend you choose - Golioth (CoAP/DTLS) by default, or your own ingest endpoint. The mobile app&apos;s AI assistant runs as a local LLM on your phone; queries against your detection history happen on-device, with no cloud inference and no third-party API.',
+        a: "Detection events are sent over LTE to a backend you choose - Golioth (CoAP/DTLS) by default, or your own ingest endpoint. The mobile app's AI assistant runs as a local LLM on your phone; queries against your detection history happen on-device, with no cloud inference and no third-party API.",
       },
     ],
   },
@@ -108,7 +108,7 @@ export default function FAQPage() {
               Things people ask, <span className="text-gold">answered straight.</span>
             </h1>
             <p className="max-w-[640px] text-lg leading-relaxed text-fg-secondary">
-              No marketing fog. Where the answer is &quot;it depends,&quot; we say that and explain what it depends on. Where the hardware can&apos;t do something, we say that too.
+              No marketing fog. Where the answer is "it depends," we say that and explain what it depends on. Where the hardware can't do something, we say that too.
             </p>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function FAQPage() {
                 Bring the question to a demo.
               </h2>
               <p className="max-w-[640px] text-fg-secondary">
-                30 minutes, live unit on the line, real engineering answers. The questions we don&apos;t answer get added here.
+                30 minutes, live unit on the line, real engineering answers. The questions we don't answer get added here.
               </p>
             </div>
             <Link
