@@ -16,7 +16,7 @@ const features: Feature[] = [
     title: 'Find any unit, as the crow flies.',
     body: 'A live directional bearing to any deployed TrailSense unit. Pulled from GPS, refreshed in real time. For when you need the unit, not the route to it.',
     src: '/images/app-compass.png',
-    alt: 'TrailSense app — compass feature pointing to a deployed unit',
+    alt: 'TrailSense app - compass feature pointing to a deployed unit',
   },
   {
     num: '02',
@@ -24,15 +24,15 @@ const features: Feature[] = [
     title: 'Drivable navigation to your unit.',
     body: 'When the property is bigger than line-of-sight, the app gives you turn-by-turn navigation along ranch roads, fire trails, and access tracks.',
     src: '/images/app-route.png',
-    alt: 'TrailSense app — route feature showing navigation to a unit',
+    alt: 'TrailSense app - route feature showing navigation to a unit',
   },
   {
     num: '03',
     tag: 'TRAILSENSE AI',
     title: "Ask the property what's happening.",
-    body: 'An on-device LLM with full access to your unit data. Ask for a situation report, query alert history, or surface anomalies — all running locally, no cloud.',
+    body: 'An on-device LLM with full access to your unit data. Ask for a situation report, query alert history, or surface anomalies - all running locally, no cloud.',
     src: '/images/app-ai.png',
-    alt: 'TrailSense AI — on-device assistant chat interface',
+    alt: 'TrailSense AI - on-device assistant chat interface',
   },
 ]
 

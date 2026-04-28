@@ -41,7 +41,7 @@ export default function WaitlistPage() {
         </h1>
 
         <p className="mb-10 text-lg text-fg-secondary">
-          TrailSense rolls out by region. Drop your email and tell us roughly where the property is — we&apos;ll reach out as units become available in your area, and again when major capability releases ship.
+          TrailSense rolls out by region. Drop your email and tell us roughly where the property is - we&apos;ll reach out as units become available in your area, and again when major capability releases ship.
         </p>
 
         {status === 'ok' ? (
@@ -53,14 +53,14 @@ export default function WaitlistPage() {
               You&apos;re queued.
             </h2>
             <p className="mb-6 text-fg-secondary">
-              Watch your inbox. If a unit opens up in your region in the next 30 days, you&apos;ll hear from us. Major release announcements come once or twice a year — never marketing spam.
+              Watch your inbox. If a unit opens up in your region in the next 30 days, you&apos;ll hear from us. Major release announcements come once or twice a year - never marketing spam.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/demo"
                 className="inline-flex items-center gap-2.5 rounded-sm bg-gold px-6 py-3 font-mono text-[13px] font-semibold uppercase tracking-spaced text-bg-deepest transition-colors hover:bg-gold-hover"
               >
-                Skip the wait — request demo <ArrowRight className="h-3.5 w-3.5" />
+                Skip the wait - request demo <ArrowRight className="h-3.5 w-3.5" />
               </Link>
               <Link
                 href="/"

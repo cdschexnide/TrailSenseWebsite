@@ -1,14 +1,14 @@
-# Design System — TrailSense
+# Design System - TrailSense
 
 ## Product Context
 - **What this is:** Marketing site for TrailSense, a precision security instrument company that sells passive multi-band RF perimeter detection hardware (cellular + WiFi + Bluetooth) and a companion mobile app.
 - **Who it's for:** Large-acreage owners (ranches, hunting/game preserves), conservation reserves, industrial sites (solar, oil, telecom), and tactical/law-enforcement teams.
 - **Memorable thing:** "Precision security instrument." Engineered, technical, defense-grade.
-- **Reference language:** Anduril, Shield AI, Saronic — but distinctive via the brand's olive + cream + field-gold palette (no defense-tech site uses this combination).
+- **Reference language:** Anduril, Shield AI, Saronic - but distinctive via the brand's olive + cream + field-gold palette (no defense-tech site uses this combination).
 
 ## Aesthetic Direction
 - **Direction:** Defense-tech minimal, brand-warmed.
-- **Decoration level:** Intentional — subtle topographic texture, mono coordinate labels, crosshair detail. No decoration for its own sake.
+- **Decoration level:** Intentional - subtle topographic texture, mono coordinate labels, crosshair detail. No decoration for its own sake.
 - **Mood:** Field-tested instrument made for olive-military environments. The site reads as a calibrated piece of equipment, not a marketing object.
 - **Reference sites:** anduril.com, saronic.com, shield.ai (visual posture), avoiding senstar.com / industrial-baseline category competitors.
 
@@ -41,7 +41,7 @@ All values pulled from the company logo (olive military bg + dark badge + khaki 
 | `bg-surface` | `#14160E` | Cards, sections. |
 | `bg-elevated` | `#1F2218` | Hover states, raised elements. |
 | `bg-elevated-2` | `#2A2D20` | Higher elevation. |
-| `bg-olive` | `#4A4B30` | Logo's olive — feature panels, quote blocks, brand-voice sections. |
+| `bg-olive` | `#4A4B30` | Logo's olive - feature panels, quote blocks, brand-voice sections. |
 | `bg-olive-deep` | `#393A23` | Darker olive variant. |
 | `text-primary` | `#ECE6D6` | Warm cream off-white. Primary text. |
 | `text-secondary` | `#C5BFAB` | Light tan. Secondary copy. |
@@ -57,8 +57,8 @@ All values pulled from the company logo (olive military bg + dark badge + khaki 
 **Color rules:**
 - Field gold (`#E0B341`) is the only "color color" used liberally on the page. It carries CTAs, hero accents, eyebrow tags, status indicators, and key spec values.
 - Khaki (`#B8A878`) carries the trail/coordinates motif. Used for lat/lon labels and surveying-style captions.
-- Olive panel (`#4A4B30`) appears once or twice per page max — used for quote/testimonial/brand-voice moments.
-- Active green and critical red are reserved exclusively for status dots — never for body text or decoration.
+- Olive panel (`#4A4B30`) appears once or twice per page max - used for quote/testimonial/brand-voice moments.
+- Active green and critical red are reserved exclusively for status dots - never for body text or decoration.
 
 ## Spacing
 - **Base unit:** 4px.
@@ -72,21 +72,21 @@ All values pulled from the company logo (olive military bg + dark badge + khaki 
 - **Approach:** Hybrid. Editorial hero, grid-disciplined product/spec sections, asymmetric brand panels.
 - **Grid:** 12-column intent, but visually expressed via 2 / 3 / 4 column layouts depending on section.
 - **Border radius:** 2px (buttons / chips), 4px (cards), 0px on most rules. No bubble-radius.
-- **Hairline rules** (`#38392A`) separate sections and divide cards inside grids — not heavy borders.
+- **Hairline rules** (`#38392A`) separate sections and divide cards inside grids - not heavy borders.
 - **Massive wordmark in footer** (Shield-AI / Saronic move): `font-weight: 900`, `clamp(80px, 18vw, 280px)`, color transparent with 1px outline-stroke in `border-bright`.
 
 ## Decoration
 - **Subtle topographic texture:** background-only, ~2.5% opacity, multi-radial-gradient ellipses. Suggests USGS contour lines without being illustrative.
 - **Section coordinate labels:** small mono `34.0522°N 118.2437°W // PT-A` strings appear as eyebrow text on major sections. Khaki for the lat/lon, gold for the inline reference.
 - **Crosshair corners:** thin 14px `┐ └ ┌ ┘` SVG strokes on the hero device card. Suggests targeting / surveying.
-- **Telemetry strip:** thin top bar above the header — mono, all caps. `● SCANNING / RF: 2.4GHz · 5.8GHz · LTE / RANGE: 800FT / UNITS DEPLOYED: 2,418 / UPTIME: 99.97%`.
+- **Telemetry strip:** thin top bar above the header - mono, all caps. `● SCANNING / RF: 2.4GHz · 5.8GHz · LTE / RANGE: 800FT / UNITS DEPLOYED: 2,418 / UPTIME: 99.97%`.
 - **NEVER:** purple gradients, 3-column icon-circle feature grids, gradient CTAs, centered-everything, generic stock photos, decorative blobs.
 
 ## Motion
 - **Approach:** Minimal-functional.
 - **Easing:** `ease-out` (entrance), `ease-in-out` (state transitions).
 - **Duration:** 150ms (micro), 250ms (short), 400ms (medium).
-- **Signature motion:** pulse animation on the active-status dot — `1.6s ease-in-out infinite`, alternating opacity 1 / 0.5 + scale 1 / 1.4 with phosphor-green glow.
+- **Signature motion:** pulse animation on the active-status dot - `1.6s ease-in-out infinite`, alternating opacity 1 / 0.5 + scale 1 / 1.4 with phosphor-green glow.
 - **No scroll-jacking, no parallax, no entrance animations beyond a single fade-in for above-the-fold elements.**
 
 ## Components
@@ -119,7 +119,7 @@ All values pulled from the company logo (olive military bg + dark badge + khaki 
 ### Logo Lockup
 - 36px logo glyph + Cabinet Grotesk 800 wordmark "TRAILSENSE", 12px gap.
 - Logo glyph is the existing companyLogo.png (olive bg + black badge + khaki S-trail + RF arcs).
-- On dark backgrounds, the logo's olive bg blends naturally — no white box around it.
+- On dark backgrounds, the logo's olive bg blends naturally - no white box around it.
 
 ## Voice / Copy
 - **Confident, terse, instrument-flavored.** "Built for property that doesn't fit inside a fence." beats "Securing your perimeter, your way."
@@ -136,32 +136,32 @@ Every spec claim on this site must be defensible against the firmware at `/Users
 - 802.11 IE fingerprinting tracks devices across MAC randomization (one phone reads as one device).
 - BLE phone-likeness heuristic separates handsets from generic IoT trackers.
 - Wideband RF burst detection: noise-floor tracking + ≥10 dB threshold over 3 consecutive samples.
-- Purpose-built, in-house detection engine: Kalman-filtered RSSI fusion, phantom-MAC suppression, cross-modal WiFi↔BLE association. (Internal codename "V2" — never use that name in marketing copy.)
+- Purpose-built, in-house detection engine: Kalman-filtered RSSI fusion, phantom-MAC suppression, cross-modal WiFi↔BLE association. (Internal codename "V2" - never use that name in marketing copy.)
 - Multi-position multilateration ("triangulation") while platform moves.
 - LTE PPP backhaul to Golioth (CoAP/DTLS) or Nightingale Analytics.
 
 **What is NOT true (do not write):**
-- "Cellular LTE / 5G band detection" — the AD8317 is a power detector, not a protocol decoder. It cannot identify LTE bands or distinguish LTE from CDMA from microwave-oven leakage.
-- "5 GHz WiFi monitoring" — firmware is 2.4 GHz only. No channel-hopping to UNII bands.
-- "MAC randomization defeated" — overclaim. Use "tracked across MAC rotation via 802.11 IE fingerprinting."
+- "Cellular LTE / 5G band detection" - the AD8317 is a power detector, not a protocol decoder. It cannot identify LTE bands or distinguish LTE from CDMA from microwave-oven leakage.
+- "5 GHz WiFi monitoring" - firmware is 2.4 GHz only. No channel-hopping to UNII bands.
+- "MAC randomization defeated" - overclaim. Use "tracked across MAC rotation via 802.11 IE fingerprinting."
 - Specific cellular band lists (B2/B4/B12/N71). The device sees RF energy in those bands, but does not identify them.
-- Specific UUID filtering on BLE — not in firmware.
+- Specific UUID filtering on BLE - not in firmware.
 - Specific tested detection range (e.g. "500–800 ft"). No tested range data exists in the repo. Detection range varies with source Tx power, antenna, terrain, band. Always caveat.
 
 When writing or editing copy, audit against this list. When in doubt, ask whether the firmware actually does the thing.
 
 ## Page Inventory
-1. **Home (`/`)** — telemetry strip → header → hero → capabilities → mobile app → olive panel → specifications → use cases → get started (demo + waitlist) → footer.
-2. **Product (`/product`)** — deep dive on TS-001 detection unit. Spec sheet, configurations, mounting options.
-3. **Technology (`/technology`)** — how passive multi-band detection works. Diagrams.
-4. **App (`/app`)** — mobile app feature tour. Compass, route, AI, alerts, dashboard, live radar.
-5. **Solutions (`/solutions`)** — sector deep-dives (ranch, conservation, industrial, tactical).
-6. **Demo (`/demo`)** — request-a-demo form (name, email, org, property size, threat profile, time preference).
-7. **Waitlist (`/waitlist`)** — email-only signup with brief context.
-8. **About (`/about`)** — team, founding, mission. Manifesto-flavored.
-9. **FAQ (`/faq`)** — accordion of common questions.
-10. **Contact (`/contact`)** — contact methods, form, address.
-11. **Privacy (`/privacy`), Terms (`/terms`)** — minimally styled legal pages.
+1. **Home (`/`)** - telemetry strip → header → hero → capabilities → mobile app → olive panel → specifications → use cases → get started (demo + waitlist) → footer.
+2. **Product (`/product`)** - deep dive on TS-001 detection unit. Spec sheet, configurations, mounting options.
+3. **Technology (`/technology`)** - how passive multi-band detection works. Diagrams.
+4. **App (`/app`)** - mobile app feature tour. Compass, route, AI, alerts, dashboard, live radar.
+5. **Solutions (`/solutions`)** - sector deep-dives (ranch, conservation, industrial, tactical).
+6. **Demo (`/demo`)** - request-a-demo form (name, email, org, property size, threat profile, time preference).
+7. **Waitlist (`/waitlist`)** - email-only signup with brief context.
+8. **About (`/about`)** - team, founding, mission. Manifesto-flavored.
+9. **FAQ (`/faq`)** - accordion of common questions.
+10. **Contact (`/contact`)** - contact methods, form, address.
+11. **Privacy (`/privacy`), Terms (`/terms`)** - minimally styled legal pages.
 
 ## Decisions Log
 | Date | Decision | Rationale |

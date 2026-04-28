@@ -279,7 +279,7 @@ export default function TechnologyPage() {
                     <strong>Cellular-only detection:</strong> A device is
                     detected on cellular but not WiFi or Bluetooth. This pattern
                     suggests the user has intentionally disabled
-                    WiFi/Bluetooth—a strong indicator of evasion and malicious
+                    WiFi/Bluetooth - a strong indicator of evasion and malicious
                     intent.
                   </p>
                 </CardContent>
@@ -361,7 +361,7 @@ export default function TechnologyPage() {
                   </h3>
                   <p className="text-earth-600">
                     TrailSense does not transmit any signals toward target
-                    devices. All detection is passive—we only listen, never
+                    devices. All detection is passive - we only listen, never
                     broadcast. This means the system is completely undetectable
                     to those being monitored and poses no privacy concerns for
                     legitimate users.
@@ -428,7 +428,7 @@ export default function TechnologyPage() {
                     In modern society, the vast majority of people carry mobile
                     devices. According to Pew Research, 97% of Americans own a
                     cell phone. For the rare individual without a phone,
-                    TrailSense would not detect them—this is a limitation of the
+                    TrailSense would not detect them - this is a limitation of the
                     technology.
                   </p>
                   <p>
@@ -456,7 +456,7 @@ export default function TechnologyPage() {
                   </ul>
                   <p>
                     However, these countermeasures are rarely employed by casual
-                    trespassers, hunters, or thieves—the primary security
+                    trespassers, hunters, or thieves - the primary security
                     concerns for most property owners. For high-security
                     applications, combine TrailSense with additional security
                     measures.

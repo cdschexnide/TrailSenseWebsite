@@ -21,7 +21,7 @@ export default function AboutPage() {
               Professional Security for Remote Properties
             </h1>
             <p className="mt-6 text-lg leading-8 text-earth-600">
-              We're building the next generation of property security technology—designed by engineers who understand the unique challenges of monitoring remote land.
+              We're building the next generation of property security technology. Designed by engineers who understand the unique challenges of monitoring remote land.
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function AboutPage() {
               {company.tagline}
             </p>
             <p className="mt-6 text-lg leading-8 text-earth-600">
-              Traditional security cameras require infrastructure, only work line-of-sight, and are easily avoided. We believe property owners deserve better. TrailSense detects the one thing nearly everyone carries—their cell phone—across vast distances, through obstacles, in complete darkness, with no infrastructure required.
+              Traditional security cameras require infrastructure, only work line-of-sight, and are easily avoided. We believe property owners deserve better. TrailSense detects the one thing nearly everyone carries: their cell phone. Detect intruders across vast distances, through obstacles, in complete darkness, with no infrastructure required.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function AboutPage() {
                   <Lightbulb className="h-8 w-8 text-primary-600 mb-4" />
                   <CardTitle>Our Solution</CardTitle>
                   <CardDescription className="text-base mt-4 text-earth-600">
-                    TrailSense takes a fundamentally different approach. Rather than trying to see intruders, we detect their mobile devices. Our multi-band detection system passively scans for cellular, WiFi, and Bluetooth signals across 500-800+ feet. Devices are completely autonomous—no WiFi, no hardwiring, just deploy and forget. Real-time alerts keep you informed no matter where you are.
+                    TrailSense takes a fundamentally different approach. Rather than trying to see intruders, we detect their mobile devices. Our multi-band detection system passively scans for cellular, WiFi, and Bluetooth signals across 500-800+ feet. Devices are completely autonomous - no WiFi, no hardwiring, just deploy and forget. Real-time alerts keep you informed no matter where you are.
                   </CardDescription>
                 </CardHeader>
               </Card>

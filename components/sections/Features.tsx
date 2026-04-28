@@ -42,7 +42,7 @@ const features = [
   {
     name: 'On-Device AI Intelligence',
     description:
-      'Mobile app includes on-device LLM for natural language queries about your detection data. Complete privacy—no data leaves your phone.',
+      'Mobile app includes on-device LLM for natural language queries about your detection data. Complete privacy - no data leaves your phone.',
     icon: Brain,
   },
 ]

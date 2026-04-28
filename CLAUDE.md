@@ -1,6 +1,6 @@
 # TrailSense Website
 
-Marketing site for TrailSense — property security via passive mobile device detection.
+Marketing site for TrailSense - property security via passive mobile device detection.
 
 ## Stack
 

@@ -28,7 +28,7 @@ const faqCategories = [
       },
       {
         q: "Can the system be defeated by turning off WiFi and Bluetooth?",
-        a: "No—this is actually where TrailSense excels. The cellular detection component works even when WiFi and Bluetooth are disabled. In fact, a cellular-only detection (no WiFi/Bluetooth) is classified as CRITICAL threat level because it suggests intentional evasion.",
+        a: "No, this is actually where TrailSense excels. The cellular detection component works even when WiFi and Bluetooth are disabled. In fact, a cellular-only detection (no WiFi/Bluetooth) is classified as CRITICAL threat level because it suggests intentional evasion.",
       },
       {
         q: "How accurate is the detection range?",
@@ -49,7 +49,7 @@ const faqCategories = [
       },
       {
         q: "What about privacy concerns?",
-        a: "TrailSense is designed with privacy in mind. The system only detects the presence of devices, not communications content. We don't intercept calls, messages, or data. On-device AI in the mobile app means your detection data stays on your phone—no cloud processing. We provide security without compromising privacy.",
+        a: "TrailSense is designed with privacy in mind. The system only detects the presence of devices, not communications content. We don't intercept calls, messages, or data. On-device AI in the mobile app means your detection data stays on your phone - no cloud processing. We provide security without compromising privacy.",
       },
       {
         q: "Do I need to post signs notifying people of monitoring?",
@@ -66,7 +66,7 @@ const faqCategories = [
     questions: [
       {
         q: "How difficult is installation?",
-        a: "Installation is straightforward and takes 15-30 minutes. Mount the unit 6-10 feet high on a post, tree, or structure. Attach the three antennas. Connect power (battery or solar). Power on and wait for GPS lock and LTE connection. Pair with mobile app via QR code. No technical expertise required—units self-configure.",
+        a: "Installation is straightforward and takes 15-30 minutes. Mount the unit 6-10 feet high on a post, tree, or structure. Attach the three antennas. Connect power (battery or solar). Power on and wait for GPS lock and LTE connection. Pair with mobile app via QR code. No technical expertise required - units self-configure.",
       },
       {
         q: "Do I need WiFi or internet access where I deploy the unit?",
@@ -74,7 +74,7 @@ const faqCategories = [
       },
       {
         q: "What about power? How long do batteries last?",
-        a: "Battery life depends on configuration and activity level. Typical: 2-6 months on battery packs. Solar panels provide indefinite operation—the unit charges during the day and operates 24/7. Low-power sleep modes conserve energy between detections.",
+        a: "Battery life depends on configuration and activity level. Typical: 2-6 months on battery packs. Solar panels provide indefinite operation - the unit charges during the day and operates 24/7. Low-power sleep modes conserve energy between detections.",
       },
       {
         q: "Can I relocate units after deployment?",
@@ -91,15 +91,15 @@ const faqCategories = [
   //   questions: [
   //     {
   //       q: 'How much does TrailSense cost?',
-  //       a: 'Target pricing: $250-350 per unit depending on configuration (battery vs. solar, antenna options). This is a one-time hardware purchase—no monthly subscription fees for the software or mobile app.',
+  //       a: 'Target pricing: $250-350 per unit depending on configuration (battery vs. solar, antenna options). This is a one-time hardware purchase - no monthly subscription fees for the software or mobile app.',
   //     },
   //     {
   //       q: 'Are there ongoing costs?',
-  //       a: 'The only ongoing cost is the LTE data plan for the unit\'s connectivity: approximately $5-15/month depending on carrier and data usage. We provide 3 months of service included with purchase. No other recurring fees—mobile app is free, software updates are free for life.',
+  //       a: 'The only ongoing cost is the LTE data plan for the unit\'s connectivity: approximately $5-15/month depending on carrier and data usage. We provide 3 months of service included with purchase. No other recurring fees - mobile app is free, software updates are free for life.',
   //     },
   //     {
   //       q: 'Is there a monthly subscription for the app or cloud service?',
-  //       a: 'No. The mobile app is completely free with device purchase, and there are no cloud service subscription fees. You only pay for the hardware and the LTE data connectivity ($5-15/month). This is one of our core values—no hidden fees or forced subscriptions.',
+  //       a: 'No. The mobile app is completely free with device purchase, and there are no cloud service subscription fees. You only pay for the hardware and the LTE data connectivity ($5-15/month). This is one of our core values - no hidden fees or forced subscriptions.',
   //     },
   //     {
   //       q: 'Do you offer bulk discounts?',
@@ -124,7 +124,7 @@ const faqCategories = [
       },
       {
         q: "What does the on-device AI do?",
-        a: 'The mobile app includes an on-device LLM (Large Language Model) that allows you to query your detection data using natural language. Ask questions like "Has anyone been detected near the north gate this week?" or "Show me unusual patterns." All processing happens on your phone—complete privacy.',
+        a: 'The mobile app includes an on-device LLM (Large Language Model) that allows you to query your detection data using natural language. Ask questions like "Has anyone been detected near the north gate this week?" or "Show me unusual patterns." All processing happens on your phone - complete privacy',
       },
       {
         q: "Does the system detect cars or animals?",

@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   }
 
   if (!WAITLIST_ENDPOINT) {
-    // Development fallback — log and accept so the form is testable locally.
+    // Development fallback - log and accept so the form is testable locally.
     console.log('[waitlist] new signup:', body)
     return NextResponse.json({ ok: true })
   }

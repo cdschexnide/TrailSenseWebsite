@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
                     accuracy)
                   </li>
                   <li>
-                    Device fingerprint hashes — anonymized identifiers derived
+                    Device fingerprint hashes - anonymized identifiers derived
                     from signal characteristics. These are not raw MAC addresses
                     or device identifiers.
                   </li>

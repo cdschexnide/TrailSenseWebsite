@@ -510,7 +510,7 @@ export default function ProductPage() {
                     </h4>
                     <p className="text-sm text-earth-600">
                       Query your detection data using natural language. Complete
-                      privacy—AI runs locally, no cloud processing.
+                      privacy. AI runs locally, on device.
                     </p>
                   </div>
                 </div>

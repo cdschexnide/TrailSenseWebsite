@@ -14,11 +14,11 @@ const solutions = [
     name: 'Rural Property & Farm Monitoring',
     icon: Tractor,
     challenge: 'Large rural properties and farms spanning hundreds of acres are impossible to effectively monitor with traditional cameras. Game cameras capture images but miss the bigger picture. Fencing is expensive and does not prevent determined trespassers.',
-    solution: 'TrailSense provides perimeter monitoring across vast distances without infrastructure. Deploy units at strategic locations—entry points, property corners, valuable equipment areas. Cellular detection reaches 500-800+ feet, allowing a single unit to cover 15-25+ acres.',
+    solution: 'TrailSense provides perimeter monitoring across vast distances without infrastructure. Deploy units at strategic locations: entry points, property corners, valuable equipment areas. Cellular detection reaches 500-800+ feet, allowing a single unit to cover 15-25+ acres.',
     benefits: [
       'Monitor large acreage without expensive fencing',
       'Detect trespassers before they reach buildings or equipment',
-      'No WiFi infrastructure required—perfect for remote land',
+      'No WiFi infrastructure required. Perfect for remote areas',
       'Solar-powered operation for year-round coverage',
       'Real-time alerts when away from property',
     ],
@@ -47,8 +47,8 @@ const solutions = [
       'Non-invasive passive detection',
       'No cameras to maintain or that disturb wildlife',
       'Detect poachers and unauthorized hunters',
-      'Low environmental impact—small, weatherproof units',
-      'Battery or solar operation—no grid power needed',
+      'Low environmental impact - small, weatherproof units',
+      'Battery or solar operation - no grid power needed',
     ],
     coverage: 'Customize based on sensitive areas and known access routes',
   },
@@ -56,13 +56,13 @@ const solutions = [
     name: 'Construction Site Oversight',
     icon: HardHat,
     challenge: 'Construction equipment, materials, and copper wiring are frequent theft targets. Traditional cameras can be disabled or avoided. You need reliable after-hours security without hiring overnight guards.',
-    solution: 'TrailSense units at site entrances and near valuable equipment provide 24/7 detection. Instant alerts mean you or authorities can respond immediately to after-hours intrusions. Device operates independently—no site power or WiFi required.',
+    solution: 'TrailSense units at site entrances and near valuable equipment provide 24/7 detection. Instant alerts mean you or authorities can respond immediately to after-hours intrusions. Device operates independently - no site power or WiFi required.',
     benefits: [
       'After-hours intrusion detection',
       'Instant alerts enable rapid response',
       'Works in areas without power or WiFi',
       'Deter theft through detection (signage)',
-      'Portable—move units as site expands',
+      'Portable - move units as site expands',
     ],
     coverage: '1-2 units for small sites, 3-5 for large construction zones',
   },
@@ -84,7 +84,7 @@ const solutions = [
     name: 'Private Road & Gate Monitoring',
     icon: KeyRound,
     challenge: 'Private drives, service roads, and gated entrances to remote properties need monitoring, but gate openers can be bypassed and cameras require power/WiFi that may not be available.',
-    solution: 'Deploy TrailSense at gate locations and along private roads to detect anyone entering—whether they have legitimate access or not. The system works completely independently with built-in LTE connectivity.',
+    solution: 'Deploy TrailSense at gate locations and along private roads to detect anyone entering - whether they have legitimate access or not. The system works completely independently with built-in LTE connectivity.',
     benefits: [
       'Know when anyone passes through, authorized or not',
       'No WiFi or power infrastructure required',
@@ -191,7 +191,7 @@ export default function SolutionsPage() {
                 </CardHeader>
                 <CardContent className="text-earth-600">
                   <p>
-                    Position units at natural choke points (gates, trails, roads) and near high-value areas (equipment, buildings, sensitive zones). Elevation helps—mounting 6-10 feet high improves range and reduces obstruction.
+                    Position units at natural choke points (gates, trails, roads) and near high-value areas (equipment, buildings, sensitive zones). Elevation helps - mounting 6-10 feet high improves range and reduces obstruction.
                   </p>
                 </CardContent>
               </Card>
