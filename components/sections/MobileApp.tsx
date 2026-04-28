@@ -12,6 +12,14 @@ type Feature = {
 const features: Feature[] = [
   {
     num: '01',
+    tag: 'MAP',
+    title: 'Your property, at a glance.',
+    body: 'The main app view. Every deployed TrailSense unit and every detected device on a single live map of your property. Tap any pin for status, signal, and history.',
+    src: '/images/app-mainmap.png',
+    alt: 'TrailSense app - main map showing deployed units and detected devices',
+  },
+  {
+    num: '02',
     tag: 'COMPASS',
     title: 'Find any unit, as the crow flies.',
     body: 'A live directional bearing to any deployed TrailSense unit. Pulled from GPS, refreshed in real time. For when you need the unit, not the route to it.',
@@ -19,7 +27,7 @@ const features: Feature[] = [
     alt: 'TrailSense app - compass feature pointing to a deployed unit',
   },
   {
-    num: '02',
+    num: '03',
     tag: 'ROUTE',
     title: 'Drivable navigation to your unit.',
     body: 'When the property is bigger than line-of-sight, the app gives you turn-by-turn navigation along ranch roads, fire trails, and access tracks.',
@@ -27,7 +35,7 @@ const features: Feature[] = [
     alt: 'TrailSense app - route feature showing navigation to a unit',
   },
   {
-    num: '03',
+    num: '04',
     tag: 'TRAILSENSE AI',
     title: "Ask the property what's happening.",
     body: 'An on-device LLM with full access to your unit data. Ask for a situation report, query alert history, or surface anomalies - all running locally, no cloud.',
@@ -54,7 +62,7 @@ export function MobileApp() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
             <div key={f.num} className="flex flex-col">
               <div className="relative mb-6 grid aspect-[0.7] place-items-center overflow-hidden rounded border border-hairline bg-bg-elevated p-6">

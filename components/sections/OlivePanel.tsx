@@ -21,13 +21,13 @@ export function OlivePanel() {
               500-acre cattle ranches. Anti-poaching corridors. Solar farms in the high desert. Wherever a perimeter is too long to staff and too important to leave unwatched, TrailSense puts a passive sensor in the ground and a live picture in your pocket.
             </p>
           </div>
-          <Link
+          {/* <Link
             href="/solutions"
             className="inline-flex items-center gap-2.5 self-start rounded-sm bg-gold px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-bg-deepest transition-colors hover:bg-gold-hover lg:self-auto"
           >
             See deployments
             <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

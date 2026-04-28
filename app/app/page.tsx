@@ -12,6 +12,14 @@ export const metadata: Metadata = {
 const features = [
   {
     num: '01',
+    tag: 'MAP',
+    title: 'Your property, at a glance.',
+    body: 'The main app view. Every deployed TrailSense unit and every detected device on a single live map of your property. Tap any pin for status, signal, and history.',
+    src: '/images/app-mainmap.png',
+    icon: Map,
+  },
+  {
+    num: '02',
     tag: 'COMPASS',
     title: 'Find any unit, as the crow flies.',
     body: 'A live directional bearing to any deployed TrailSense unit. Pulled from GPS, refreshed in real time. For when you need the unit, not the route to it.',
@@ -19,7 +27,7 @@ const features = [
     icon: Compass,
   },
   {
-    num: '02',
+    num: '03',
     tag: 'ROUTE',
     title: 'Drivable navigation to your unit.',
     body: 'When the property is bigger than line-of-sight, the app gives you turn-by-turn navigation along ranch roads, fire trails, and access tracks.',
@@ -27,15 +35,15 @@ const features = [
     icon: Map,
   },
   {
-    num: '03',
-    tag: 'LIVE MAP',
-    title: 'Every detected device on the property.',
-    body: 'A tactical satellite view of the property with detection events overlaid in real time. WiFi devices, BLE advertisers, RF bursts - clustered, classified, and time-stamped.',
+    num: '04',
+    tag: 'DETECTIONS',
+    title: 'Drill into the active feed.',
+    body: 'A tactical view of every device the property is currently seeing. WiFi probes, BLE advertisers, wideband RF bursts - clustered, classified, and time-stamped.',
     src: '/images/app-map.png',
     icon: Radio,
   },
   {
-    num: '04',
+    num: '05',
     tag: 'TRAILSENSE AI',
     title: "Ask the property what's happening.",
     body: 'An on-device LLM with full access to your unit data. Ask for a situation report, query alert history, or surface anomalies. Runs locally on your phone - no cloud, no account, no data leakage.',

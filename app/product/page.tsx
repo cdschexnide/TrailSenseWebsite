@@ -22,7 +22,7 @@ const specs = [
   },
   {
     key: 'LNA',
-    desc: 'Nooelec LANA wideband ultra-low-noise amplifier, bias-tee compatible.',
+    desc: 'Wideband ultra-low-noise amplifier, bias-tee compatible.',
     value: '~25 dB gain',
   },
   {
@@ -88,7 +88,7 @@ export default function ProductPage() {
                 The detection unit, <span className="text-gold">end to end.</span>
               </h1>
               <p className="mb-10 max-w-[560px] text-lg leading-relaxed text-fg-secondary">
-                The TrailSense Meerkat is a passive RF perimeter sensor: an AD8317 logarithmic RF detector behind a Nooelec LANA LNA, plus the ESP32-S3&apos;s WiFi and BLE radios, all running our in-house detection engine. Solar power, LTE backhaul, weatherproof housing, mounts in 90 seconds.
+                The TrailSense Meerkat is a passive RF perimeter sensor: an AD8317 logarithmic RF detector behind a Nooelec LANA LNA, plus the ESP32-S3&apos;s WiFi and BLE radios, all running proprietary detection engine. Solar power, LTE backhaul, weatherproof housing, mounts in 90 seconds.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link

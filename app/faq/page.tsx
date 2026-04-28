@@ -20,7 +20,7 @@ const categories = [
     items: [
       {
         q: 'What does the unit actually detect?',
-        a: 'A TrailSense unit runs three concurrent sensing channels: (1) wideband analog RF power across 20-4000 MHz via an AD8317 logarithmic detector + Nooelec LANA LNA, (2) 802.11 WiFi 2.4 GHz management frames in promiscuous mode, and (3) Bluetooth Low Energy advertisements via passive GAP scan. Our in-house detection engine fuses the three streams and tracks devices across MAC randomization using 802.11 IE fingerprinting.',
+        a: 'A TrailSense unit runs three concurrent sensing channels: (1) wideband analog RF power across 20-4000 MHz via an AD8317 logarithmic detector + Nooelec LANA LNA, (2) 802.11 WiFi 2.4 GHz management frames in promiscuous mode, and (3) Bluetooth Low Energy advertisements via passive GAP scan. Our proprietary detection engine fuses the three streams and tracks devices across MAC randomization using 802.11 IE fingerprinting.',
       },
       {
         q: 'Can it identify cellular bands or decode LTE / 5G?',

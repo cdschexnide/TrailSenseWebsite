@@ -11,11 +11,11 @@ const capabilities: Capability[] = [
     num: '01',
     band: 'WIDEBAND RF',
     title: 'Analog RF burst detection.',
-    body: 'An AD8317 logarithmic power detector paired with a Nooelec LANA LNA passively monitors RF energy from 20 MHz to 4 GHz. When a transmission breaks the noise floor, the firmware logs a burst. No protocol decoding, no active emission.',
+    body: 'The Meerkat passively monitors RF energy from 20 MHz to 4 GHz. When a transmission breaks the noise floor, the firmware logs a burst. No protocol decoding, no active emission.',
     specs: [
       { label: 'Coverage', value: '20 – 4000 MHz' },
       { label: 'Detector', value: 'AD8317 LOG' },
-      { label: 'LNA gain', value: '~25 dB' },
+      { label: 'LNA gain', value: '~20 dB' },
     ],
   },
   {
@@ -56,7 +56,7 @@ export function Capabilities() {
             Three RF channels. One fused picture.
           </h2>
           <p className="section-dek">
-            Each TrailSense unit runs three concurrent sensing channels - a wideband analog RF detector, an 802.11 WiFi sniffer, and a passive BLE scanner. Our in-house detection engine fuses the evidence and resolves the same device seen across multiple channels into one detection.
+            Each TrailSense unit runs three concurrent sensing channels: a wideband analog RF detector, an 802.11 WiFi sniffer, and a passive BLE scanner. Our proprietary detection engine fuses the evidence and resolves the same device seen across multiple channels into one detection.
           </p>
         </div>
 

@@ -5,7 +5,7 @@ import { ArrowRight, Radio, Wifi, Bluetooth } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Technology',
   description:
-    'How TrailSense actually works: AD8317 wideband RF detection, Nooelec LANA LNA, ESP32-S3 with our in-house detection engine. Three concurrent sensing channels fused with IE fingerprinting and cross-modal correlation.',
+    'How TrailSense actually works: AD8317 wideband RF detection, Nooelec LANA LNA, ESP32-S3 with proprietary detection engine. Three concurrent sensing channels fused with IE fingerprinting and cross-modal correlation.',
 }
 
 export default function TechnologyPage() {
@@ -23,7 +23,7 @@ export default function TechnologyPage() {
               Three RF channels. <span className="text-gold">One fused picture.</span>
             </h1>
             <p className="max-w-[640px] text-lg leading-relaxed text-fg-secondary">
-              TrailSense is not magic. It is an AD8317 logarithmic RF power detector behind a Nooelec LANA wideband LNA, plus the ESP32-S3&apos;s native WiFi and BLE radios, all feeding our in-house detection engine. This page explains, with no marketing fluff, exactly what each piece does and what it cannot do.
+              TrailSense is not magic. It is an AD8317 logarithmic RF power detector behind a Nooelec LANA wideband LNA, plus the ESP32-S3&apos;s native WiFi and BLE radios, all feeding our proprietary detection engine. This page explains, with no marketing fluff, exactly what each piece does and what it cannot do.
             </p>
           </div>
         </div>

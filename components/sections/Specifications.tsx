@@ -23,7 +23,7 @@ const specs: Spec[] = [
   },
   {
     key: 'LNA',
-    desc: 'Nooelec LANA wideband ultra-low-noise amplifier, bias-tee compatible.',
+    desc: 'Wideband ultra-low-noise amplifier, bias-tee compatible.',
     value: '~25 dB gain',
   },
   {
@@ -43,7 +43,7 @@ const specs: Spec[] = [
   },
   {
     key: 'Uplink',
-    desc: 'LTE PPP backhaul to Golioth (CoAP / DTLS) or Nightingale Analytics API.',
+    desc: 'LTE PPP backhaul to Golioth via CoAP',
     value: 'LTE · COAP-DTLS',
   },
   {
@@ -70,16 +70,16 @@ export function Specifications() {
               <span className="num">{'// REV 04'}</span>
             </div>
             <h2 className="section-h2">Built for the field.</h2>
-            <p className="section-dek">
-              Hardware: an AD8317 logarithmic RF detector behind a Nooelec LANA LNA, an ESP32-S3 running our in-house detection engine, an LTE PPP modem for backhaul. Effective range varies with source transmit power, antenna, terrain, and band.
-            </p>
+            {/* <p className="section-dek">
+              Hardware: an AD8317 logarithmic RF detector behind a Nooelec LANA LNA, an ESP32-S3 running our proprietary detection engine, an LTE PPP modem for backhaul. Effective range varies with source transmit power, antenna, terrain, and band.
+            </p> */}
           </div>
-          <Link
+          {/* <Link
             href="/product"
             className="inline-flex items-center gap-2.5 self-start rounded-sm border border-border-bright bg-transparent px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-fg-primary transition-colors hover:border-fg-primary hover:bg-bg-elevated"
           >
             Full spec sheet
-          </Link>
+          </Link> */}
         </div>
 
         <div className="overflow-hidden rounded border border-hairline bg-bg-surface">
