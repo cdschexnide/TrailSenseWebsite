@@ -66,7 +66,7 @@ export function Specifications() {
         <div className="mb-16 flex flex-wrap items-end justify-between gap-12">
           <div className="max-w-[720px]">
             <div className="coords">
-              <span className="khaki">SPEC SHEET · TS-001</span>
+              <span className="khaki">SPEC SHEET · Meerkat</span>
               <span className="num">{'// REV 04'}</span>
             </div>
             <h2 className="section-h2">Built for the field.</h2>

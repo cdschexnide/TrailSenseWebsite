@@ -77,7 +77,7 @@ All values pulled from the company logo (olive military bg + dark badge + khaki 
 
 ## Decoration
 - **Subtle topographic texture:** background-only, ~2.5% opacity, multi-radial-gradient ellipses. Suggests USGS contour lines without being illustrative.
-- **Section eyebrows:** small mono labels like `SPEC SHEET · TS-001 // REV 04` or `SENSING CHANNELS // 03` appear above each major section heading. Khaki for the descriptor, gold for the comment-style reference. Do not use literal GPS coordinates as decoration; pick semantic labels that describe the section.
+- **Section eyebrows:** small mono labels like `SPEC SHEET · Meerkat // REV 04` or `SENSING CHANNELS // 03` appear above each major section heading. Khaki for the descriptor, gold for the comment-style reference. Do not use literal GPS coordinates as decoration; pick semantic labels that describe the section.
 - **Crosshair corners:** thin 14px `┐ └ ┌ ┘` SVG strokes on the hero device card. Suggests targeting / surveying.
 - **Telemetry strip:** thin top bar above the header - mono, all caps. `● SCANNING / RF: 2.4GHz · 5.8GHz · LTE / RANGE: 800FT / UNITS DEPLOYED: 2,418 / UPTIME: 99.97%`.
 - **NEVER:** purple gradients, 3-column icon-circle feature grids, gradient CTAs, centered-everything, generic stock photos, decorative blobs.

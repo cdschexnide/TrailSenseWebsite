@@ -71,7 +71,7 @@ export default function ProductPage() {
           <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
             <div>
               <div className="coords">
-                <span className="khaki">PRODUCT · TS-001</span>
+                <span className="khaki">PRODUCT · Meerkat</span>
                 <span className="num">{'// REV 04'}</span>
               </div>
               <h1 className="mb-7 font-display text-4xl font-extrabold leading-[0.96] tracking-display-tight text-fg-primary text-balance sm:text-6xl">
@@ -98,7 +98,7 @@ export default function ProductPage() {
             </div>
             <div className="relative aspect-[1.05] rounded border border-hairline bg-bg-surface p-5">
               <div className="mb-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-spaced">
-                <span className="text-fg-muted">UNIT ID · TS-001</span>
+                <span className="text-fg-muted">UNIT ID · Meerkat</span>
                 <span className="text-fg-disabled">FIG. 01</span>
               </div>
               <div className="relative grid h-full place-items-center overflow-hidden rounded-sm bg-gradient-to-b from-bg-elevated to-bg-surface">

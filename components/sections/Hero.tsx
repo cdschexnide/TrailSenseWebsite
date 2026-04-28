@@ -10,7 +10,7 @@ export function Hero() {
         <div>
           <div className="mb-6 flex items-center gap-3 font-mono text-[11px] uppercase tracking-spaced text-gold">
             <span className="block h-px w-8 bg-gold" />
-            PASSIVE PERIMETER SENSING · TS-001
+            PASSIVE PERIMETER SENSING · Meerkat
           </div>
 
           <h1 className="mb-7 font-display text-4xl font-extrabold leading-[0.96] tracking-display-tight text-fg-primary text-balance sm:text-6xl lg:text-7xl">
@@ -49,7 +49,7 @@ export function Hero() {
         {/* Device card */}
         <div className="relative aspect-[1.05] rounded border border-hairline bg-bg-surface p-5 lg:max-w-none">
           <div className="mb-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-spaced">
-            <span className="text-fg-muted">UNIT ID · TS-001</span>
+            <span className="text-fg-muted">UNIT ID · Meerkat</span>
             <span className="text-fg-disabled">FIG. 01</span>
           </div>
           <div className="relative grid h-full place-items-center overflow-hidden rounded-sm bg-gradient-to-b from-bg-elevated to-bg-surface">
