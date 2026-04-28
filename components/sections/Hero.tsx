@@ -19,7 +19,7 @@ export function Hero() {
           </h1>
 
           <p className="mb-10 max-w-[540px] text-lg leading-relaxed text-fg-secondary">
-            TrailSense monitors three RF channels in parallel: wideband RF power across 20 MHz to 4 GHz, 802.11 WiFi 2.4 GHz, and Bluetooth Low Energy. Our in-house detection engine - built specifically for this hardware - correlates the evidence and tracks devices across MAC rotation. No cameras. No active transmission. No recurring fees.
+            TrailSense monitors three RF channels in parallel: wideband RF power across 20 MHz to 4 GHz, 802.11 WiFi 2.4 GHz, and Bluetooth Low Energy. Our proprietary detection & device fingerprinting engine - built specifically for this hardware - correlates the evidence and tracks devices across MAC rotation. No cameras. No active transmissions.
           </p>
 
           <div className="mb-14 flex flex-wrap gap-3">

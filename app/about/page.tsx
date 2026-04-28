@@ -1,180 +1,167 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Target, Users, Lightbulb, Shield, ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { company } from '@/lib/data/site-config'
+import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About TrailSense - Our Mission & Team',
-  description: 'Learn about TrailSense, our mission to provide professional-grade security solutions for rural and remote properties, and the team behind the technology.',
+  title: 'Company',
+  description:
+    'TrailSense builds passive RF perimeter sensors for property that does not fit inside a fence. Instrument-grade hardware, in-house detection software, no cloud lock-in.',
 }
 
-export default function AboutPage() {
+export default function CompanyPage() {
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-b from-primary-50 to-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-earth-900 sm:text-6xl">
-              Professional Security for Remote Properties
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-earth-600">
-              We're building the next generation of property security technology. Designed by engineers who understand the unique challenges of monitoring remote land.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Mission Section */}
-      <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Our Mission</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-              {company.tagline}
-            </p>
-            <p className="mt-6 text-lg leading-8 text-earth-600">
-              Traditional security cameras require infrastructure, only work line-of-sight, and are easily avoided. We believe property owners deserve better. TrailSense detects the one thing nearly everyone carries: their cell phone. Detect intruders across vast distances, through obstacles, in complete darkness, with no infrastructure required.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-              <Card>
-                <CardHeader>
-                  <Target className="h-8 w-8 text-primary-600 mb-4" />
-                  <CardTitle>The Problem We're Solving</CardTitle>
-                  <CardDescription className="text-base mt-4 text-earth-600">
-                    Rural property owners face unique security challenges. Properties spanning hundreds of acres can't be effectively monitored with cameras. Game cameras capture images but miss the bigger picture. Traditional alarm systems require hardwired infrastructure that doesn't exist on remote land. Trespassers, unauthorized visitors, and unwanted activity often go undetected until it's too late.
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <Lightbulb className="h-8 w-8 text-primary-600 mb-4" />
-                  <CardTitle>Our Solution</CardTitle>
-                  <CardDescription className="text-base mt-4 text-earth-600">
-                    TrailSense takes a fundamentally different approach. Rather than trying to see intruders, we detect their mobile devices. Our multi-band detection system passively scans for cellular, WiFi, and Bluetooth signals across 500-800+ feet. Devices are completely autonomous - no WiFi, no hardwiring, just deploy and forget. Real-time alerts keep you informed no matter where you are.
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+    <>
+      {/* Hero */}
+      <section className="relative z-[1] border-b border-hairline">
+        <div className="container-page py-24 md:py-32">
+          <div className="max-w-[920px]">
+            <div className="coords">
+              <span className="khaki">COMPANY</span>
+              <span className="num">{'// EST. 2024'}</span>
             </div>
+            <h1 className="mb-7 font-display text-4xl font-extrabold leading-[0.96] tracking-display-tight text-fg-primary text-balance sm:text-6xl lg:text-7xl">
+              We build for property that <span className="text-gold">doesn&apos;t fit inside a fence.</span>
+            </h1>
+            <p className="max-w-[640px] text-lg leading-relaxed text-fg-secondary">
+              TrailSense is a small team of engineers who got tired of watching ranchers, conservation managers, and remote-property owners try to monitor thousands of acres with cameras designed for a doorbell. We built passive RF sensors and the software to make sense of them. Every unit ships with hardware we picked, firmware we wrote, and a detection engine we own.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Company Info */}
-      <div className="bg-earth-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-              About {company.name}
-            </h2>
+      {/* Why */}
+      <section className="border-b border-hairline">
+        <div className="container-page py-24">
+          <div className="label-row">PREMISE · 01</div>
+          <div className="mb-16 max-w-[720px]">
+            <div className="coords">
+              <span className="khaki">WHY THIS EXISTS</span>
+              <span className="num">{'// THE GAP'}</span>
+            </div>
+            <h2 className="section-h2">Cameras don&apos;t scale to land.</h2>
+            <p className="section-dek">
+              500 acres of cattle land, a 12-mile fire road, an off-grid solar farm. None of those properties have the line-of-sight, the bandwidth, or the staffing to make a camera-based system work. They need sensors that pick up active devices passing through, not pixels of trees moving in wind.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <Card>
-              <CardHeader>
-                <Shield className="h-8 w-8 text-primary-600 mb-4" />
-                <CardTitle>Founded by Engineers</CardTitle>
-                <CardDescription className="text-base mt-4 text-earth-600">
-                  TrailSense was founded by a team of engineers and security professionals who were frustrated by the lack of effective monitoring solutions for large, remote properties. We built the system we wished existed.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Users className="h-8 w-8 text-primary-600 mb-4" />
-                <CardTitle>{company.type}</CardTitle>
-                <CardDescription className="text-base mt-4 text-earth-600">
-                  Established as an {company.type} in {company.founded}, we're committed to sustainable growth and delivering long-term value to our customers. We're building a company and product designed to last.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Target className="h-8 w-8 text-primary-600 mb-4" />
-                <CardTitle>Our Commitment</CardTitle>
-                <CardDescription className="text-base mt-4 text-earth-600">
-                  We're committed to transparent pricing, no hidden fees, and no forced subscriptions. You buy the hardware, you own the system. We provide the tools, you maintain control of your data and your security.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+          <div className="grid gap-1 overflow-hidden rounded border border-hairline bg-hairline md:grid-cols-2">
+            <ValueCard
+              tag="THE PROBLEM"
+              title="Properties bigger than a single field of view."
+              body="Game cameras catch one trail. Doorbell cams catch one door. A 500-acre property has thousands of feet of perimeter and dozens of access paths. Traditional security gear assumes a built environment that simply isn&apos;t there."
+            />
+            <ValueCard
+              tag="THE APPROACH"
+              title="Detect the device, not the body."
+              body="Almost every person crossing a property carries a phone. We listen for that phone&apos;s active radios - WiFi, Bluetooth, and wideband RF - across hundreds of feet, with no cameras and no active transmission of our own."
+            />
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Values */}
-      <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-              Our Values
-            </h2>
+      <section className="border-b border-hairline">
+        <div className="container-page py-24">
+          <div className="label-row">VALUES · 02</div>
+          <div className="mb-16 max-w-[720px]">
+            <h2 className="section-h2">What we won&apos;t compromise.</h2>
+            <p className="section-dek">
+              These aren&apos;t marketing values. They are concrete engineering and product decisions that constrain what we will and will not ship.
+            </p>
           </div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <Value
+              num="01"
+              title="Passive only"
+              body="Our hardware never transmits a probe to elicit a response. We only listen. Detected devices and their owners have no way of knowing they were seen."
+            />
+            <Value
+              num="02"
+              title="On-device first"
+              body="The mobile app&apos;s AI assistant runs as a local LLM on your phone. Your detection data never leaves the device unless you explicitly export it."
+            />
+            <Value
+              num="03"
+              title="No subscription lock-in"
+              body="The hardware is yours. The software updates are free. The only recurring cost is your unit&apos;s LTE data plan, which you can swap for satellite if you prefer."
+            />
+            <Value
+              num="04"
+              title="Defensible claims"
+              body="We will not invent specs. Every range, sensitivity, and capability claim on this site maps to firmware that ships. If the hardware can&apos;t do it, we won&apos;t print it."
+            />
+          </div>
+        </div>
+      </section>
 
-          <div className="mx-auto max-w-3xl">
-            <div className="space-y-8">
-              <div className="border-l-4 border-primary-600 pl-6">
-                <h3 className="text-xl font-semibold text-earth-900 mb-2">Privacy First</h3>
-                <p className="text-earth-600">
-                  We believe property monitoring shouldn't compromise privacy. Our on-device AI means your detection data stays on your phone. We passively monitor RF signals, not people. You own your data, always.
-                </p>
+      {/* CTA */}
+      <section className="border-b border-hairline">
+        <div className="container-page py-24">
+          <div className="grid gap-1 overflow-hidden rounded border border-hairline bg-hairline md:grid-cols-2">
+            <div className="flex flex-col bg-bg-surface p-10 md:p-12">
+              <div className="mb-6 font-mono text-[11px] uppercase tracking-spaced text-gold">
+                NEXT STEP · 01
               </div>
-
-              <div className="border-l-4 border-primary-600 pl-6">
-                <h3 className="text-xl font-semibold text-earth-900 mb-2">Transparent Pricing</h3>
-                <p className="text-earth-600">
-                  No hidden fees, no forced subscriptions, no surprise charges. You pay for the hardware, we provide free software updates for life. The only ongoing cost is your optional LTE data plan.
-                </p>
+              <h3 className="mb-3 font-display text-[28px] font-bold leading-tight tracking-display-snug text-fg-primary">
+                Talk to us about your property.
+              </h3>
+              <p className="mb-8 text-fg-secondary">
+                30 minutes, live unit, real coverage map for your property boundary.
+              </p>
+              <Link
+                href="/demo"
+                className="inline-flex items-center gap-2.5 self-start rounded-sm bg-gold px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-bg-deepest transition-colors hover:bg-gold-hover"
+              >
+                Request demo
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+            <div className="flex flex-col bg-bg-surface p-10 md:p-12">
+              <div className="mb-6 font-mono text-[11px] uppercase tracking-spaced text-khaki">
+                NEXT STEP · 02
               </div>
-
-              <div className="border-l-4 border-primary-600 pl-6">
-                <h3 className="text-xl font-semibold text-earth-900 mb-2">Built to Last</h3>
-                <p className="text-earth-600">
-                  We design for durability and longevity. Weatherproof hardware, efficient power consumption, and over-the-air updates mean your TrailSense system will serve you for years.
-                </p>
-              </div>
-
-              <div className="border-l-4 border-primary-600 pl-6">
-                <h3 className="text-xl font-semibold text-earth-900 mb-2">Customer Success</h3>
-                <p className="text-earth-600">
-                  Your security is our success. We provide comprehensive documentation, responsive support, and continuous improvements based on real-world feedback from property owners like you.
-                </p>
-              </div>
+              <h3 className="mb-3 font-display text-[28px] font-bold leading-tight tracking-display-snug text-fg-primary">
+                Get on the waitlist.
+              </h3>
+              <p className="mb-8 text-fg-secondary">
+                We deploy by region. Tell us where the property is and we&apos;ll reach out as units open up.
+              </p>
+              <Link
+                href="/waitlist"
+                className="inline-flex items-center gap-2.5 self-start rounded-sm border border-border-bright bg-transparent px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-fg-primary transition-colors hover:border-fg-primary hover:bg-bg-elevated"
+              >
+                Join waitlist
+              </Link>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+    </>
+  )
+}
 
-      {/* CTA */}
-      <div className="bg-gradient-to-br from-primary-600 to-sage-700 py-16">
-        <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Join us in reimagining property security
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-primary-100">
-            Whether you're securing 10 acres or 1,000, we're here to help design the perfect solution.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-x-6">
-            <Button asChild size="xl" variant="secondary">
-              <Link href="/contact">
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild size="xl" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10">
-              <Link href="/product">
-                View Product
-              </Link>
-            </Button>
-          </div>
-        </div>
+function ValueCard({ tag, title, body }: { tag: string; title: string; body: string }) {
+  return (
+    <div className="bg-bg-surface p-10 transition-colors hover:bg-bg-elevated md:p-12">
+      <div className="mb-6 font-mono text-[11px] uppercase tracking-spaced text-gold">
+        {tag}
       </div>
+      <h3 className="mb-3 font-display text-2xl font-bold leading-tight tracking-display-snug text-fg-primary">
+        {title}
+      </h3>
+      <p className="text-fg-secondary leading-relaxed">{body}</p>
+    </div>
+  )
+}
+
+function Value({ num, title, body }: { num: string; title: string; body: string }) {
+  return (
+    <div className="rounded border border-hairline bg-bg-surface p-6 transition-colors hover:bg-bg-elevated">
+      <div className="mb-4 font-mono text-[11px] uppercase tracking-spaced text-gold">{num}</div>
+      <h3 className="mb-2 font-display text-lg font-bold tracking-display-snug text-fg-primary">
+        {title}
+      </h3>
+      <p className="text-sm leading-relaxed text-fg-secondary">{body}</p>
     </div>
   )
 }

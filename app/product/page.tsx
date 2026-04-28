@@ -1,661 +1,260 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
-import {
-  Radio,
-  Wifi,
-  Bluetooth,
-  Battery,
-  CloudRain,
-  Zap,
-  Smartphone,
-  Gauge,
-  ArrowRight,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
+import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: "Product - TrailSense Detection Unit & Mobile App",
+  title: 'Product',
   description:
-    "Explore the TrailSense detection unit hardware specifications, mobile app features, and pricing. Multi-band wireless detection for property security.",
-};
+    'TrailSense TS-001 detection unit: AD8317 logarithmic RF detector + Nooelec LANA LNA + ESP32-S3, weatherproof outdoor housing, solar power, LTE PPP backhaul to Golioth.',
+}
+
+const specs = [
+  {
+    key: 'RF coverage',
+    desc: 'LNA pass-band on the analog channel. AD8317 detector itself extends to 10 GHz at reduced gain.',
+    value: '20 - 4000 MHz',
+  },
+  {
+    key: 'Detector',
+    desc: 'AD8317 logarithmic RF power detector, 60 dB dynamic range, 1 MHz - 10 GHz.',
+    value: '-55 -> 0 dBm',
+  },
+  {
+    key: 'LNA',
+    desc: 'Nooelec LANA wideband ultra-low-noise amplifier, bias-tee compatible.',
+    value: '~25 dB gain',
+  },
+  {
+    key: 'WiFi / BLE radio',
+    desc: 'Native ESP32-S3 radios. WiFi 2.4 GHz promiscuous-mode capture, BLE GAP passive scan.',
+    value: '2.4 GHz',
+  },
+  {
+    key: 'WiFi / BLE sensitivity',
+    desc: 'RSSI threshold below which a frame is ignored. Tunable at runtime.',
+    value: '-85 dBm',
+  },
+  {
+    key: 'Detection engine',
+    desc: 'Purpose-built fingerprinting and fusion logic. Kalman-filtered RSSI, 802.11 IE fingerprinting, phantom-MAC suppression, cross-modal WiFi/BLE association.',
+    value: 'IN-HOUSE',
+  },
+  {
+    key: 'Localization',
+    desc: 'Multi-position multilateration. Resolves device location while the platform moves.',
+    value: 'TRIANGULATION',
+  },
+  {
+    key: 'Compute',
+    desc: 'ESP32-S3 dual-core, 16 MB flash. Fixed-point math throughout the detection pipeline; no floats.',
+    value: 'ESP32-S3',
+  },
+  {
+    key: 'Uplink',
+    desc: 'LTE PPP backhaul to Golioth (CoAP / DTLS) or Nightingale Analytics. Pre-activated SIM included.',
+    value: 'LTE-M / NB-IoT',
+  },
+  {
+    key: 'Power',
+    desc: 'Solar panel + 18650 lithium-ion. Low-power sleep modes between scan cycles. Multi-month autonomy in low sun.',
+    value: '12V DC / SOLAR',
+  },
+  {
+    key: 'Enclosure',
+    desc: 'Outdoor-rated housing, UV-stabilized polycarbonate, tool-free mount on fence, post, or tree.',
+    value: 'IP67-CLASS',
+  },
+  {
+    key: 'Operating temperature',
+    desc: 'Field-tested across the seasonal envelope.',
+    value: '-20°C / +60°C',
+  },
+]
 
 export default function ProductPage() {
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-b from-primary-50 to-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-earth-900 sm:text-6xl">
-              TrailSense Detection System
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-earth-600">
-              Professional-grade hardware and intelligent mobile app for
-              comprehensive property monitoring.
-            </p>
-          </div>
-
-          {/* Product image */}
-          <div className="mt-12 flex justify-center">
-            <div className="relative rounded-2xl bg-earth-900/5 p-8 ring-1 ring-inset ring-earth-900/10">
-              <Image
-                src="/images/device.png"
-                alt="TrailSense Detection Unit"
-                width={896}
-                height={504}
-                className="w-full max-w-4xl rounded-lg shadow-2xl"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Detection Methods */}
-      <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-              Three-Band Detection System
-            </h2>
-            <p className="mt-4 text-lg text-earth-600">
-              Simultaneous multi-band scanning provides comprehensive coverage
-              and intelligent threat classification.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {/* Cellular Detection */}
-            <Card>
-              <CardHeader>
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-clay-500/10">
-                  <Radio className="h-6 w-6 text-clay-600" />
-                </div>
-                <CardTitle>Cellular Uplink Detection</CardTitle>
-                <CardDescription className="text-base mt-2">
-                  Breakthrough passive RF detection
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-earth-600">
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>
-                      <strong>Range:</strong> 500-800+ feet (15-25+ acres)
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>
-                      <strong>Frequency:</strong> 700-2700 MHz (all major US
-                      cellular bands)
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>
-                      <strong>Key Feature:</strong> Works even when target
-                      device has WiFi/BT disabled
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>Low-noise amplifier extends range 3-5x</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* WiFi Detection */}
-            <Card>
-              <CardHeader>
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-100">
-                  <Wifi className="h-6 w-6 text-primary-600" />
-                </div>
-                <CardTitle>WiFi Probe Scanning</CardTitle>
-                <CardDescription className="text-base mt-2">
-                  2.4 GHz probe request detection
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-earth-600">
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>
-                      <strong>Range:</strong> ~300 feet (~6.5 acres)
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>
-                      <strong>Frequency:</strong> 2.4 GHz WiFi band
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>
-                      Captures MAC addresses and signal strength (RSSI)
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>Detects phones searching for known networks</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Bluetooth Detection */}
-            <Card>
-              <CardHeader>
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-sage-500/10">
-                  <Bluetooth className="h-6 w-6 text-sage-700" />
-                </div>
-                <CardTitle>Bluetooth/BLE Scanning</CardTitle>
-                <CardDescription className="text-base mt-2">
-                  BLE advertisement detection
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-earth-600">
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>
-                      <strong>Range:</strong> ~100 feet (~0.7 acres)
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>
-                      <strong>Protocol:</strong> Bluetooth Low Energy (BLE)
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>Detects nearby Bluetooth-enabled devices</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span>Close-range verification and confirmation</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-12 rounded-lg bg-primary-50 p-6">
-            <p className="text-sm text-earth-700">
-              <strong className="text-primary-700">
-                Multi-Band Correlation:
-              </strong>{" "}
-              The device uses proprietary algorithms to correlate detections
-              across all three bands, reducing false positives and intelligently
-              classifying threats. For example, a cellular-only detection (no
-              WiFi/Bluetooth) is flagged as CRITICAL because it suggests
-              intentional evasion.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Hardware Specifications */}
-      <div className="bg-earth-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-              Hardware Specifications
-            </h2>
-            <p className="mt-4 text-lg text-earth-600">
-              Built for rugged outdoor deployment with professional-grade
-              components.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <Card>
-              <CardHeader>
-                <Battery className="h-8 w-8 text-primary-600 mb-2" />
-                <CardTitle>Power Options</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-1 text-sm text-earth-600">
-                  <li>• 18650 Li-ion battery packs</li>
-                  <li>• Solar panel compatible</li>
-                  <li>• Months of battery life</li>
-                  <li>• Low-power sleep modes</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CloudRain className="h-8 w-8 text-primary-600 mb-2" />
-                <CardTitle>Weatherproofing</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-1 text-sm text-earth-600">
-                  <li>• IP65+ rated enclosure</li>
-                  <li>• Temperature: -20°C to +60°C</li>
-                  <li>• UV-resistant materials</li>
-                  <li>• Outdoor-rated connectors</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Zap className="h-8 w-8 text-primary-600 mb-2" />
-                <CardTitle>Processing</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-1 text-sm text-earth-600">
-                  <li>• ESP32-S3 dual-core MCU</li>
-                  <li>• 16MB flash storage</li>
-                  <li>• Real-time signal processing</li>
-                  <li>• On-device algorithms</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Radio className="h-8 w-8 text-primary-600 mb-2" />
-                <CardTitle>Connectivity</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-1 text-sm text-earth-600">
-                  <li>• LTE modem (SIM7600/7000)</li>
-                  <li>• 4G LTE Cat-1/Cat-M</li>
-                  <li>• GPS positioning</li>
-                  {/* <li>• ~$5-15/mo data plan</li> */}
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Gauge className="h-8 w-8 text-primary-600 mb-2" />
-                <CardTitle>Detection Hardware</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-1 text-sm text-earth-600">
-                  <li>• AD8313 RF power detector</li>
-                  <li>• Nooelec LaNA amplifier</li>
-                  <li>• Three specialized antennas</li>
-                  <li>• 0.1-2.5 GHz detection</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Smartphone className="h-8 w-8 text-primary-600 mb-2" />
-                <CardTitle>Physical</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-1 text-sm text-earth-600">
-                  <li>• Compact weatherproof case</li>
-                  <li>• Mounting hardware included</li>
-                  <li>• Easy antenna installation</li>
-                  <li>• Indicator LED status</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Technical Details Accordion */}
-          <div className="mt-12 max-w-4xl mx-auto">
-            <Accordion
-              type="single"
-              collapsible
-              className="bg-white rounded-lg shadow-sm"
-            >
-              <AccordionItem value="item-1">
-                <AccordionTrigger className="px-6">
-                  <span className="font-semibold">
-                    What's included in the box?
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 text-earth-600">
-                  <ul className="space-y-1 ml-4">
-                    <li>• TrailSense detection unit (fully assembled)</li>
-                    <li>• Three antennas (cellular, WiFi, LTE)</li>
-                    <li>• Mounting hardware and bracket</li>
-                    <li>
-                      • Battery pack or solar panel (configuration dependent)
-                    </li>
-                    <li>• Quick start guide and documentation</li>
-                    <li>• SIM card (pre-activated with 3 months service)</li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-2">
-                <AccordionTrigger className="px-6">
-                  <span className="font-semibold">
-                    Deployment and installation
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 text-earth-600">
-                  <p>Installation takes approximately 15-30 minutes:</p>
-                  <ol className="mt-2 space-y-1 ml-4 list-decimal">
-                    <li>
-                      Mount unit on post, tree, or structure 6-10 feet high
-                    </li>
-                    <li>Attach three antennas to connectors</li>
-                    <li>Connect power (battery or solar)</li>
-                    <li>Power on and wait for GPS lock and LTE connection</li>
-                    <li>Pair with mobile app via QR code</li>
-                  </ol>
-                  <p className="mt-2">
-                    No technical expertise required. Units self-configure and
-                    auto-connect to the cloud backend.
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3">
-                <AccordionTrigger className="px-6">
-                  <span className="font-semibold">
-                    Range and coverage considerations
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 text-earth-600">
-                  <p>Detection range varies based on terrain and conditions:</p>
-                  <ul className="mt-2 space-y-1 ml-4">
-                    <li>
-                      • <strong>Open terrain:</strong> Maximum range (800+ ft
-                      cellular, 300 ft WiFi)
-                    </li>
-                    <li>
-                      • <strong>Light forest:</strong> 10-20% range reduction
-                    </li>
-                    <li>
-                      • <strong>Dense forest:</strong> 30-50% range reduction
-                    </li>
-                    <li>
-                      • <strong>Hills/valleys:</strong> Line-of-sight matters
-                      for optimal performance
-                    </li>
-                  </ul>
-                  <p className="mt-2">
-                    For properties larger than 25 acres, we recommend multiple
-                    units for full coverage. Our team can help design an optimal
-                    deployment plan.
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile App */}
-      <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-              Intelligent Mobile App
-            </h2>
-            <p className="mt-4 text-lg text-earth-600">
-              Powerful iOS and Android app with real-time monitoring and
-              on-device AI.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* App Features List */}
+    <>
+      {/* Hero */}
+      <section className="relative z-[1] border-b border-hairline">
+        <div className="container-page py-24 md:py-32">
+          <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
             <div>
-              <h3 className="text-2xl font-bold text-earth-900 mb-6">
-                Key Features
-              </h3>
-              <div className="space-y-4">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
-                    <span className="text-primary-600 font-bold">01</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-earth-900">
-                      Real-Time Alerts
-                    </h4>
-                    <p className="text-sm text-earth-600">
-                      Instant push notifications with threat classification
-                      (Critical/High/Medium/Low) and detection details.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
-                    <span className="text-primary-600 font-bold">02</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-earth-900">
-                      Live Radar Display
-                    </h4>
-                    <p className="text-sm text-earth-600">
-                      WebSocket-based real-time visualization showing detected
-                      devices, distances, and threat levels on an interactive
-                      radar.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
-                    <span className="text-primary-600 font-bold">03</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-earth-900">
-                      Analytics Dashboard
-                    </h4>
-                    <p className="text-sm text-earth-600">
-                      Trends, heatmaps, hourly patterns, device fingerprinting,
-                      and repeat visitor tracking.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
-                    <span className="text-primary-600 font-bold">04</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-earth-900">
-                      Device Management
-                    </h4>
-                    <p className="text-sm text-earth-600">
-                      Monitor battery levels, signal strength, online/offline
-                      status, and GPS coordinates for all your TrailSense units.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
-                    <span className="text-primary-600 font-bold">05</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-earth-900">
-                      Whitelist System
-                    </h4>
-                    <p className="text-sm text-earth-600">
-                      Add known devices (family, guests, service) to eliminate
-                      false positives. Auto-learn from user feedback.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center">
-                    <span className="text-primary-600 font-bold">06</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-earth-900">
-                      On-Device AI
-                    </h4>
-                    <p className="text-sm text-earth-600">
-                      Query your detection data using natural language. Complete
-                      privacy. AI runs locally, on device.
-                    </p>
-                  </div>
-                </div>
+              <div className="coords">
+                <span className="khaki">PRODUCT · TS-001</span>
+                <span className="num">{'// REV 04'}</span>
               </div>
-
-              <div className="mt-8">
-                <p className="text-sm text-earth-600 italic">
-                  <strong>Platform:</strong> iOS 14+ and Android 10+
-                  <br />
-                  <strong>Price:</strong> Free with device purchase, no
-                  subscription fees
-                </p>
+              <h1 className="mb-7 font-display text-4xl font-extrabold leading-[0.96] tracking-display-tight text-fg-primary text-balance sm:text-6xl">
+                The detection unit, <span className="text-gold">end to end.</span>
+              </h1>
+              <p className="mb-10 max-w-[560px] text-lg leading-relaxed text-fg-secondary">
+                The TrailSense Meerkat is a passive RF perimeter sensor: an AD8317 logarithmic RF detector behind a Nooelec LANA LNA, plus the ESP32-S3&apos;s WiFi and BLE radios, all running our in-house detection engine. Solar power, LTE backhaul, weatherproof housing, mounts in 90 seconds.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/demo"
+                  className="inline-flex items-center gap-2.5 rounded-sm bg-gold px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-bg-deepest transition-colors hover:bg-gold-hover"
+                >
+                  Request demo
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+                <Link
+                  href="/technology"
+                  className="inline-flex items-center gap-2.5 rounded-sm border border-border-bright bg-transparent px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-fg-primary transition-colors hover:border-fg-primary hover:bg-bg-elevated"
+                >
+                  How it works
+                </Link>
               </div>
             </div>
-
-            {/* App Screenshots Placeholder */}
-            <div className="flex items-center">
-              <div className="w-full aspect-[9/16] max-w-sm mx-auto rounded-3xl bg-gradient-to-br from-earth-800 to-earth-900 shadow-2xl p-4 ring-1 ring-earth-700">
-                <div className="h-full w-full rounded-2xl bg-gradient-to-br from-primary-600/20 to-sage-700/20 flex items-center justify-center">
-                  <div className="text-center text-white p-6">
-                    <Smartphone className="h-16 w-16 mx-auto mb-4 opacity-50" />
-                    <p className="text-lg font-semibold mb-2">
-                      Mobile App Screenshot
-                    </p>
-                    <p className="text-xs opacity-70">
-                      Live Radar, Alerts, Analytics
-                    </p>
-                  </div>
-                </div>
+            <div className="relative aspect-[1.05] rounded border border-hairline bg-bg-surface p-5">
+              <div className="mb-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-spaced">
+                <span className="text-fg-muted">UNIT ID · TS-001</span>
+                <span className="text-fg-disabled">FIG. 01</span>
+              </div>
+              <div className="relative grid h-full place-items-center overflow-hidden rounded-sm bg-gradient-to-b from-bg-elevated to-bg-surface">
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-25"
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(#38392A 1px, transparent 1px), linear-gradient(90deg, #38392A 1px, transparent 1px)',
+                    backgroundSize: '32px 32px',
+                  }}
+                />
+                <Image
+                  src="/images/device.png"
+                  alt="TrailSense TS-001 detection unit"
+                  width={420}
+                  height={420}
+                  priority
+                  className="relative z-[1] max-h-full w-3/4 max-w-[320px] object-contain drop-shadow-[0_16px_32px_rgba(0,0,0,0.5)]"
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Pricing */}
-      {/* <div className="bg-earth-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-earth-900 sm:text-4xl">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="mt-4 text-lg text-earth-600">
-              Professional security without recurring subscription fees.
+      {/* Spec sheet */}
+      <section id="specs" className="border-b border-hairline">
+        <div className="container-page py-24">
+          <div className="label-row">SPECIFICATIONS · 01</div>
+          <div className="mb-16 max-w-[720px]">
+            <div className="coords">
+              <span className="khaki">SPEC SHEET</span>
+              <span className="num">{'// HARDWARE'}</span>
+            </div>
+            <h2 className="section-h2">Built for the field.</h2>
+            <p className="section-dek">
+              Detection range varies with source transmit power, antenna, terrain, and band. We do not print a single number; we map your actual property on the demo call.
             </p>
           </div>
-
-          <div className="mx-auto max-w-lg">
-            <Card className="border-2 border-primary-600 shadow-xl">
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-3xl">
-                  TrailSense Detection Unit
-                </CardTitle>
-                <div className="mt-4">
-                  <span className="text-5xl font-bold text-earth-900">
-                    $250
-                  </span>
-                  <span className="text-2xl text-earth-600"> - $350</span>
-                </div>
-                <p className="text-sm text-earth-600 mt-2">
-                  One-time purchase, varies by configuration
-                </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-earth-600">
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600 font-bold">✓</span>
-                    <span>Complete detection unit with all hardware</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600 font-bold">✓</span>
-                    <span>Three antennas and mounting hardware</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600 font-bold">✓</span>
-                    <span>Free mobile app (iOS & Android)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600 font-bold">✓</span>
-                    <span>3 months LTE service included</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600 font-bold">✓</span>
-                    <span>No monthly subscription fees</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600 font-bold">✓</span>
-                    <span>Lifetime software updates</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600 font-bold">✓</span>
-                    <span>1-year hardware warranty</span>
-                  </li>
-                </ul>
-
-                <div className="mt-8 p-4 bg-primary-50 rounded-lg">
-                  <p className="text-sm text-earth-700">
-                    <strong>Ongoing costs:</strong> LTE data plan only
-                    (~$5-15/month depending on carrier and data usage). No other
-                    fees.
-                  </p>
-                </div>
-
-                <div className="mt-6">
-                  <Button asChild className="w-full" size="lg">
-                    <Link href="/contact">
-                      Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                </div>
-
-                <p className="mt-4 text-xs text-center text-earth-600">
-                  Bulk discounts available for multiple units. Contact us for
-                  custom deployments.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="overflow-hidden rounded border border-hairline bg-bg-surface">
+            {specs.map((s, i) => (
+              <div
+                key={s.key}
+                className={`grid gap-6 px-6 py-5 transition-colors hover:bg-bg-elevated md:grid-cols-[240px_1fr_200px] md:gap-8 md:px-8 ${
+                  i < specs.length - 1 ? 'border-b border-hairline' : ''
+                }`}
+              >
+                <span className="font-mono text-[11px] uppercase tracking-spaced text-fg-muted">
+                  {s.key}
+                </span>
+                <span className="text-sm leading-relaxed text-fg-primary">{s.desc}</span>
+                <span className="font-mono text-[13px] tabular tracking-[0.02em] text-fg-primary md:text-right">
+                  {s.value}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
-      </div> */}
+      </section>
+
+      {/* In the box */}
+      <section className="border-b border-hairline">
+        <div className="container-page py-24">
+          <div className="label-row">PACKAGE · 02</div>
+          <div className="mb-16 max-w-[720px]">
+            <h2 className="section-h2">What ships in the box.</h2>
+            <p className="section-dek">Everything required to mount, power, and bring a unit online.</p>
+          </div>
+          <div className="grid gap-1 overflow-hidden rounded border border-hairline bg-hairline md:grid-cols-2 lg:grid-cols-3">
+            <BoxItem
+              title="TS-001 detection unit"
+              body="Fully assembled in IP67-class enclosure with antennas integrated. Pre-flashed firmware with the latest detection engine."
+            />
+            <BoxItem
+              title="Solar panel + battery"
+              body="12V solar panel and 18650 lithium-ion battery pack, sized for off-grid operation through low-sun seasons."
+            />
+            <BoxItem
+              title="LTE SIM card"
+              body="Pre-activated cellular data SIM with three months of LTE-M / NB-IoT service included; bring your own carrier after."
+            />
+            <BoxItem
+              title="Mount kit"
+              body="Tool-free post / tree / pole mount, plus weatherproof connectors and tamper-resistant fasteners."
+            />
+            <BoxItem
+              title="Quick-start card"
+              body="Single page. Mount, power on, scan QR with the app, you&apos;re online. Full docs at trailsense.com/docs."
+            />
+            <BoxItem
+              title="Software updates"
+              body="OTA firmware updates over LTE for the life of the unit. New detection engine releases auto-deploy."
+            />
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
-      <div className="bg-gradient-to-br from-primary-600 to-sage-700 py-16">
-        <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Ready to secure your property?
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-primary-100">
-            Get a custom quote based on your property size and monitoring needs.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-x-6">
-            <Button asChild size="xl" variant="secondary">
-              <Link href="/contact">Request a Quote</Link>
-            </Button>
-            <Button
-              asChild
-              size="xl"
-              variant="outline"
-              className="bg-transparent text-white border-white hover:bg-white/10"
-            >
-              <Link href="/technology">Learn About the Technology</Link>
-            </Button>
+      <section className="border-b border-hairline">
+        <div className="container-page py-24">
+          <div className="grid gap-1 overflow-hidden rounded border border-hairline bg-hairline md:grid-cols-2">
+            <div className="flex flex-col bg-bg-surface p-10 md:p-12">
+              <div className="mb-6 font-mono text-[11px] uppercase tracking-spaced text-gold">
+                NEXT STEP · 01
+              </div>
+              <h3 className="mb-3 font-display text-[28px] font-bold leading-tight tracking-display-snug text-fg-primary">
+                Get a deployment quote.
+              </h3>
+              <p className="mb-8 text-fg-secondary">Live demo, coverage map, deployment plan.</p>
+              <Link
+                href="/demo"
+                className="inline-flex items-center gap-2.5 self-start rounded-sm bg-gold px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-bg-deepest transition-colors hover:bg-gold-hover"
+              >
+                Request demo
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+            <div className="flex flex-col bg-bg-surface p-10 md:p-12">
+              <div className="mb-6 font-mono text-[11px] uppercase tracking-spaced text-khaki">
+                NEXT STEP · 02
+              </div>
+              <h3 className="mb-3 font-display text-[28px] font-bold leading-tight tracking-display-snug text-fg-primary">
+                Wait for your region.
+              </h3>
+              <p className="mb-8 text-fg-secondary">Drop your email, we reach out as units open up.</p>
+              <Link
+                href="/waitlist"
+                className="inline-flex items-center gap-2.5 self-start rounded-sm border border-border-bright bg-transparent px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-fg-primary transition-colors hover:border-fg-primary hover:bg-bg-elevated"
+              >
+                Join waitlist
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+    </>
+  )
+}
+
+function BoxItem({ title, body }: { title: string; body: string }) {
+  return (
+    <div className="bg-bg-surface p-6 transition-colors hover:bg-bg-elevated">
+      <h3 className="mb-2 font-display text-lg font-bold tracking-display-snug text-fg-primary">
+        {title}
+      </h3>
+      <p className="text-sm leading-relaxed text-fg-secondary">{body}</p>
     </div>
-  );
+  )
 }

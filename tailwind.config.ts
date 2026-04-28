@@ -82,9 +82,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ['var(--font-display)', 'Cabinet Grotesk', 'sans-serif'],
-        sans: ['var(--font-body)', 'Geist', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-mono)', 'Geist Mono', 'monospace'],
+        display: ['Cabinet Grotesk', 'Geist', 'system-ui', 'sans-serif'],
+        sans: ['Geist', 'system-ui', 'sans-serif'],
+        mono: ['Geist Mono', 'JetBrains Mono', 'monospace'],
       },
       letterSpacing: {
         tightest: '-0.04em',

@@ -83,13 +83,6 @@ export default function RootLayout({
           href="https://fonts.bunny.net/css?family=geist:300,400,500,600,700|geist-mono:400,500,600|cabinet-grotesk:500,700,800,900&display=swap"
           rel="stylesheet"
         />
-        <style>{`
-          :root {
-            --font-display: 'Cabinet Grotesk', 'Geist', system-ui, sans-serif;
-            --font-body: 'Geist', system-ui, sans-serif;
-            --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
-          }
-        `}</style>
       </head>
       <body className="min-h-screen bg-bg-deepest font-sans antialiased text-fg-primary">
         <div className="relative flex min-h-screen flex-col">

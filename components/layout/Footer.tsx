@@ -64,8 +64,7 @@ export function Footer() {
         TRAILSENSE
       </div>
 
-      <div className="container-page mt-8 flex justify-between border-t border-hairline pt-6 font-mono text-[11px] uppercase tracking-spaced text-fg-disabled">
-        <span>34.0522°N · 118.2437°W</span>
+      <div className="container-page mt-8 flex justify-end border-t border-hairline pt-6 font-mono text-[11px] uppercase tracking-spaced text-fg-disabled">
         <span>v1.0</span>
       </div>
     </footer>

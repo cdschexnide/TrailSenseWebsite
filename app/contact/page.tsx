@@ -1,161 +1,161 @@
-import { Metadata } from 'next'
-import { Mail, Phone, MapPin } from 'lucide-react'
-import { QuoteForm } from '@/components/forms/QuoteForm'
-import { ContactForm } from '@/components/forms/ContactForm'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react'
 import { siteConfig } from '@/lib/data/site-config'
 
 export const metadata: Metadata = {
-  title: 'Contact Us & Request a Quote',
-  description: 'Get a custom quote for your property security needs or contact the TrailSense team. We typically respond within 24 hours.',
+  title: 'Contact',
+  description:
+    'Reach the TrailSense team. Most paths route to /demo (deployment quote) or /waitlist (region availability). Press, partnerships, and general inquiries are welcome.',
 }
 
 export default function ContactPage() {
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-b from-primary-50 to-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-earth-900 sm:text-6xl">
-              Let's Secure Your Property
+    <>
+      {/* Hero */}
+      <section className="relative z-[1] border-b border-hairline">
+        <div className="container-page py-24 md:py-32">
+          <div className="max-w-[920px]">
+            <div className="coords">
+              <span className="khaki">CONTACT</span>
+              <span className="num">{'// 4 PATHS'}</span>
+            </div>
+            <h1 className="mb-7 font-display text-4xl font-extrabold leading-[0.96] tracking-display-tight text-fg-primary text-balance sm:text-6xl lg:text-7xl">
+              Reach the <span className="text-gold">team.</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-earth-600">
-              Request a custom quote or get in touch with our team. We're here to help design the perfect security solution for your needs.
+            <p className="max-w-[640px] text-lg leading-relaxed text-fg-secondary">
+              Most people who land here want a deployment quote or to get on the waitlist - both of those have purpose-built forms below. For everything else, email works fine.
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Contact Info Cards */}
-      <div className="py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            <Card>
-              <CardHeader className="text-center">
-                <Mail className="h-8 w-8 text-primary-600 mx-auto mb-2" />
-                <CardTitle className="text-lg">Email</CardTitle>
-                <CardDescription className="mt-2">
-                  <a href={`mailto:${siteConfig.contact.email}`} className="text-primary-700 hover:text-primary-800">
-                    {siteConfig.contact.email}
-                  </a>
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card>
-              <CardHeader className="text-center">
-                <Phone className="h-8 w-8 text-primary-600 mx-auto mb-2" />
-                <CardTitle className="text-lg">Phone</CardTitle>
-                <CardDescription className="mt-2">
-                  <a href={`tel:${siteConfig.contact.phone}`} className="text-primary-700 hover:text-primary-800">
-                    {siteConfig.contact.phone}
-                  </a>
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card>
-              <CardHeader className="text-center">
-                <MapPin className="h-8 w-8 text-primary-600 mx-auto mb-2" />
-                <CardTitle className="text-lg">Location</CardTitle>
-                <CardDescription className="mt-2">
-                  {siteConfig.contact.address}
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </div>
-
-      {/* Forms Section */}
-      <div className="py-24 bg-earth-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
-            {/* Quote Form */}
-            <div>
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold tracking-tight text-earth-900">
-                  Request a Quote
-                </h2>
-                <p className="mt-4 text-lg text-earth-600">
-                  Tell us about your property and security needs. We'll design a custom deployment plan and provide pricing within 24 hours.
-                </p>
+      {/* Primary paths */}
+      <section className="border-b border-hairline">
+        <div className="container-page py-24">
+          <div className="label-row">PRIMARY PATHS · 01</div>
+          <div className="grid gap-1 overflow-hidden rounded border border-hairline bg-hairline md:grid-cols-2">
+            <div className="flex flex-col bg-bg-surface p-10 md:p-12">
+              <div className="mb-6 font-mono text-[11px] uppercase tracking-spaced text-gold">
+                PATH · 01 · DEMO
               </div>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <QuoteForm />
-                </CardContent>
-              </Card>
-
-              <div className="mt-6 rounded-lg bg-primary-50 p-4">
-                <p className="text-sm text-earth-700">
-                  <strong className="text-primary-700">Typical Response Time:</strong> 24 hours or less. For urgent inquiries, please call us directly.
-                </p>
-              </div>
+              <h3 className="mb-3 font-display text-[28px] font-bold leading-tight tracking-display-snug text-fg-primary">
+                Talk to us about your property.
+              </h3>
+              <p className="mb-8 text-fg-secondary">
+                30-minute live demo, coverage map for your boundary, deployment quote.
+              </p>
+              <Link
+                href="/demo"
+                className="inline-flex items-center gap-2.5 self-start rounded-sm bg-gold px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-bg-deepest transition-colors hover:bg-gold-hover"
+              >
+                Request demo
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
-
-            {/* General Contact Form */}
-            <div>
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold tracking-tight text-earth-900">
-                  General Inquiry
-                </h2>
-                <p className="mt-4 text-lg text-earth-600">
-                  Have questions about our technology, partnerships, or something else? Send us a message and we'll get back to you soon.
-                </p>
+            <div className="flex flex-col bg-bg-surface p-10 md:p-12">
+              <div className="mb-6 font-mono text-[11px] uppercase tracking-spaced text-khaki">
+                PATH · 02 · WAITLIST
               </div>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <ContactForm />
-                </CardContent>
-              </Card>
-
-              <div className="mt-6">
-                <h3 className="font-semibold text-earth-900 mb-3">Common Inquiries:</h3>
-                <ul className="space-y-2 text-sm text-earth-600">
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span><strong>Technical Support:</strong> For existing customers needing assistance</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span><strong>Partnership Opportunities:</strong> Interested in becoming a reseller or integrator</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span><strong>Press & Media:</strong> Interview requests and media inquiries</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary-600">•</span>
-                    <span><strong>Bulk Orders:</strong> Enterprise or government deployments</span>
-                  </li>
-                </ul>
-              </div>
+              <h3 className="mb-3 font-display text-[28px] font-bold leading-tight tracking-display-snug text-fg-primary">
+                Get on the waitlist.
+              </h3>
+              <p className="mb-8 text-fg-secondary">
+                We deploy by region. Drop email and rough location, we reach out as units open up.
+              </p>
+              <Link
+                href="/waitlist"
+                className="inline-flex items-center gap-2.5 self-start rounded-sm border border-border-bright bg-transparent px-6 py-3.5 font-mono text-[13px] font-semibold uppercase tracking-spaced text-fg-primary transition-colors hover:border-fg-primary hover:bg-bg-elevated"
+              >
+                Join waitlist
+              </Link>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* FAQ Teaser */}
-      <div className="py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-earth-900 mb-4">
-            Have questions before reaching out?
-          </h2>
-          <p className="text-earth-600 mb-8">
-            Check out our comprehensive FAQ section for answers to common questions about TrailSense technology, deployment, and pricing.
-          </p>
-          <a
-            href="/faq"
-            className="text-base font-semibold leading-7 text-primary-700 hover:text-primary-800 transition-colors"
-          >
-            Visit FAQ Page <span aria-hidden="true">→</span>
-          </a>
+      {/* Direct contact */}
+      <section className="border-b border-hairline">
+        <div className="container-page py-24">
+          <div className="label-row">DIRECT · 02</div>
+          <div className="mb-12 max-w-[720px]">
+            <h2 className="section-h2">For everything else.</h2>
+            <p className="section-dek">
+              Press, partnerships, technical support for existing customers, government / enterprise inquiries - email is the fastest path. We answer within one business day.
+            </p>
+          </div>
+          <div className="grid gap-1 overflow-hidden rounded border border-hairline bg-hairline md:grid-cols-3">
+            <ContactCard
+              icon={Mail}
+              tag="EMAIL"
+              label={siteConfig.contact.email}
+              href={`mailto:${siteConfig.contact.email}`}
+            />
+            <ContactCard
+              icon={Phone}
+              tag="PHONE"
+              label={siteConfig.contact.phone}
+              href={`tel:${siteConfig.contact.phone}`}
+            />
+            <ContactCard icon={MapPin} tag="LOCATION" label={siteConfig.contact.address} />
+          </div>
         </div>
+      </section>
+
+      {/* Inquiry types */}
+      <section className="border-b border-hairline">
+        <div className="container-page py-24">
+          <div className="label-row">COMMON INQUIRIES · 03</div>
+          <div className="mb-12 max-w-[720px]">
+            <h2 className="section-h2">If your question fits one of these, write &quot;[type]&quot; in the subject.</h2>
+            <p className="section-dek">
+              It routes faster. Otherwise just send the email - we&apos;ll figure it out.
+            </p>
+          </div>
+          <div className="grid gap-1 overflow-hidden rounded border border-hairline bg-hairline md:grid-cols-2 lg:grid-cols-4">
+            <Inquiry tag="SUPPORT" body="Existing customer needing help with a deployed unit, the app, or backhaul." />
+            <Inquiry tag="PARTNERSHIPS" body="Reseller, integrator, or platform partnership conversation." />
+            <Inquiry tag="PRESS" body="Media inquiries, interviews, briefings, embargoed product info." />
+            <Inquiry tag="ENTERPRISE" body="Bulk orders, government deployments, custom hardware or backhaul." />
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+function ContactCard({
+  icon: Icon,
+  tag,
+  label,
+  href,
+}: {
+  icon: typeof Mail
+  tag: string
+  label: string
+  href?: string
+}) {
+  const content = (
+    <div className="flex flex-col gap-3 bg-bg-surface p-8 transition-colors hover:bg-bg-elevated md:p-10">
+      <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-spaced text-gold">
+        <Icon className="h-3.5 w-3.5" />
+        {tag}
       </div>
+      <span className="font-display text-xl font-bold tracking-display-snug text-fg-primary">
+        {label}
+      </span>
+    </div>
+  )
+  return href ? <a href={href}>{content}</a> : content
+}
+
+function Inquiry({ tag, body }: { tag: string; body: string }) {
+  return (
+    <div className="bg-bg-surface p-6 transition-colors hover:bg-bg-elevated">
+      <div className="mb-3 font-mono text-[11px] uppercase tracking-spaced text-gold">
+        {tag}
+      </div>
+      <p className="text-sm leading-relaxed text-fg-secondary">{body}</p>
     </div>
   )
 }
