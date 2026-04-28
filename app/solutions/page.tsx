@@ -34,9 +34,9 @@ const sectors = [
     icon: HardHat,
     title: 'Industrial sites',
     challenge:
-      'Solar farms, oil and gas fields, telecom towers, water treatment. Long perimeters, valuable equipment, theft and sabotage risk after hours. Existing alarm systems trip on wildlife and weather.',
+      'Solar farms, telecom towers, substations, water-treatment plants. Long perimeters, high-value equipment, theft and sabotage risk after hours. Legacy alarm systems trip on wildlife and weather and burn out the on-call rotation.',
     approach:
-      "Perimeter line of TrailSense units, each covering several hundred feet of fenceline. The detection engine's phantom-MAC suppression and confidence scoring keep false-positive rates low so on-call staff don't burn out.",
+      "A perimeter line of TrailSense units, each covering several hundred feet of fenceline at the choke points that matter. The detection engine's phantom-MAC suppression and confidence scoring keep false-positive rates low, so the alerts that fire are the ones worth answering.",
     typical: '1 unit per 300-500 ft of perimeter, depending on threat profile',
   },
   {
